@@ -12,5 +12,6 @@ target 'hgss' do
   pod 'Alamofire',    '~> 4.4.0'
   pod 'Unbox',        '~> 2.3.0'
   pod 'Wrap'
+  pod 'UnboxedAlamofire', '~> 2.0'
 
 end

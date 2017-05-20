@@ -22,9 +22,19 @@
 		789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753BF1ED0788D00228A33 /* AppDelegate.swift */; };
 		789753C41ED0792700228A33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 789753C31ED0792700228A33 /* Info.plist */; };
 		789753C71ED07A3E00228A33 /* MainActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753C61ED07A3E00228A33 /* MainActionViewController.swift */; };
-		78F8ED651ED0F69C00ABD3ED /* Invite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F8ED601ED0F69C00ABD3ED /* Invite.storyboard */; };
-		78F8ED661ED0F69C00ABD3ED /* InviteFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED611ED0F69C00ABD3ED /* InviteFormViewController.swift */; };
-		78F8ED671ED0F69C00ABD3ED /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED621ED0F69C00ABD3ED /* InviteViewController.swift */; };
+		78E541931ED0FBB500E7D93D /* AcriveOperationMapRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E541801ED0FBB500E7D93D /* AcriveOperationMapRootViewController.swift */; };
+		78E541941ED0FBB500E7D93D /* ActiveOperationDetailsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E541811ED0FBB500E7D93D /* ActiveOperationDetailsRootViewController.swift */; };
+		78E541951ED0FBB500E7D93D /* ActiveOperationFeedRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E541821ED0FBB500E7D93D /* ActiveOperationFeedRootViewController.swift */; };
+		78E541961ED0FBB500E7D93D /* ActiveOperationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E541831ED0FBB500E7D93D /* ActiveOperationStoryboard.storyboard */; };
+		78E541971ED0FBB500E7D93D /* ActiveOperationTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E541841ED0FBB500E7D93D /* ActiveOperationTabBarViewController.swift */; };
+		78E541981ED0FBB500E7D93D /* ActiveOperationFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E541861ED0FBB500E7D93D /* ActiveOperationFeedTableViewController.swift */; };
+		78E541991ED0FBB500E7D93D /* ActiveOperationLeadFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E541871ED0FBB500E7D93D /* ActiveOperationLeadFeedViewController.swift */; };
+		78E5419A1ED0FBB500E7D93D /* RemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E5418A1ED0FBB500E7D93D /* RemoteAPI.swift */; };
+		78E5419B1ED0FBB500E7D93D /* OperationFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E5418C1ED0FBB500E7D93D /* OperationFeedModel.swift */; };
+		78E5419C1ED0FBB500E7D93D /* OperationFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E5418E1ED0FBB500E7D93D /* OperationFeedTableViewCell.swift */; };
+		78E5419D1ED0FBB500E7D93D /* Invite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E541901ED0FBB500E7D93D /* Invite.storyboard */; };
+		78E5419E1ED0FBB500E7D93D /* InviteFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E541911ED0FBB500E7D93D /* InviteFormViewController.swift */; };
+		78E5419F1ED0FBB500E7D93D /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E541921ED0FBB500E7D93D /* InviteViewController.swift */; };
 		F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,9 +56,19 @@
 		789753BF1ED0788D00228A33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789753C31ED0792700228A33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		789753C61ED07A3E00228A33 /* MainActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActionViewController.swift; sourceTree = "<group>"; };
-		78F8ED601ED0F69C00ABD3ED /* Invite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Invite.storyboard; sourceTree = "<group>"; };
-		78F8ED611ED0F69C00ABD3ED /* InviteFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFormViewController.swift; sourceTree = "<group>"; };
-		78F8ED621ED0F69C00ABD3ED /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+		78E541801ED0FBB500E7D93D /* AcriveOperationMapRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcriveOperationMapRootViewController.swift; sourceTree = "<group>"; };
+		78E541811ED0FBB500E7D93D /* ActiveOperationDetailsRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationDetailsRootViewController.swift; sourceTree = "<group>"; };
+		78E541821ED0FBB500E7D93D /* ActiveOperationFeedRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationFeedRootViewController.swift; sourceTree = "<group>"; };
+		78E541831ED0FBB500E7D93D /* ActiveOperationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActiveOperationStoryboard.storyboard; sourceTree = "<group>"; };
+		78E541841ED0FBB500E7D93D /* ActiveOperationTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationTabBarViewController.swift; sourceTree = "<group>"; };
+		78E541861ED0FBB500E7D93D /* ActiveOperationFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationFeedTableViewController.swift; sourceTree = "<group>"; };
+		78E541871ED0FBB500E7D93D /* ActiveOperationLeadFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationLeadFeedViewController.swift; sourceTree = "<group>"; };
+		78E5418A1ED0FBB500E7D93D /* RemoteAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAPI.swift; sourceTree = "<group>"; };
+		78E5418C1ED0FBB500E7D93D /* OperationFeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFeedModel.swift; sourceTree = "<group>"; };
+		78E5418E1ED0FBB500E7D93D /* OperationFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFeedTableViewCell.swift; sourceTree = "<group>"; };
+		78E541901ED0FBB500E7D93D /* Invite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Invite.storyboard; sourceTree = "<group>"; };
+		78E541911ED0FBB500E7D93D /* InviteFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFormViewController.swift; sourceTree = "<group>"; };
+		78E541921ED0FBB500E7D93D /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.release.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.release.xcconfig"; sourceTree = "<group>"; };
 		FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hgss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -171,7 +191,8 @@
 		789753BE1ED077C500228A33 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				78F8ED5F1ED0F69C00ABD3ED /* Invite */,
+				78E5417F1ED0FBB500E7D93D /* ActiveOperation */,
+				78E5418F1ED0FBB500E7D93D /* Invite */,
 				2F9F6D591ED0C2F40000388A /* ActiveAction */,
 				2F09358A1ED07E9300468C55 /* CreateAction */,
 				789753C51ED07A2600228A33 /* MainAction */,
@@ -190,12 +211,70 @@
 			path = hgss/Modules/Main;
 			sourceTree = SOURCE_ROOT;
 		};
-		78F8ED5F1ED0F69C00ABD3ED /* Invite */ = {
+		78E5417F1ED0FBB500E7D93D /* ActiveOperation */ = {
 			isa = PBXGroup;
 			children = (
-				78F8ED601ED0F69C00ABD3ED /* Invite.storyboard */,
-				78F8ED611ED0F69C00ABD3ED /* InviteFormViewController.swift */,
-				78F8ED621ED0F69C00ABD3ED /* InviteViewController.swift */,
+				78E541801ED0FBB500E7D93D /* AcriveOperationMapRootViewController.swift */,
+				78E541811ED0FBB500E7D93D /* ActiveOperationDetailsRootViewController.swift */,
+				78E541821ED0FBB500E7D93D /* ActiveOperationFeedRootViewController.swift */,
+				78E541831ED0FBB500E7D93D /* ActiveOperationStoryboard.storyboard */,
+				78E541841ED0FBB500E7D93D /* ActiveOperationTabBarViewController.swift */,
+				78E541851ED0FBB500E7D93D /* ChildViewControllers */,
+			);
+			name = ActiveOperation;
+			path = hgss/Modules/ActiveOperation;
+			sourceTree = SOURCE_ROOT;
+		};
+		78E541851ED0FBB500E7D93D /* ChildViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				78E541861ED0FBB500E7D93D /* ActiveOperationFeedTableViewController.swift */,
+				78E541871ED0FBB500E7D93D /* ActiveOperationLeadFeedViewController.swift */,
+				78E541881ED0FBB500E7D93D /* Data */,
+				78E5418B1ED0FBB500E7D93D /* Models */,
+				78E5418D1ED0FBB500E7D93D /* Views */,
+			);
+			path = ChildViewControllers;
+			sourceTree = "<group>";
+		};
+		78E541881ED0FBB500E7D93D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				78E541891ED0FBB500E7D93D /* DataManager */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		78E541891ED0FBB500E7D93D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				78E5418A1ED0FBB500E7D93D /* RemoteAPI.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		78E5418B1ED0FBB500E7D93D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78E5418C1ED0FBB500E7D93D /* OperationFeedModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78E5418D1ED0FBB500E7D93D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78E5418E1ED0FBB500E7D93D /* OperationFeedTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		78E5418F1ED0FBB500E7D93D /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				78E541901ED0FBB500E7D93D /* Invite.storyboard */,
+				78E541911ED0FBB500E7D93D /* InviteFormViewController.swift */,
+				78E541921ED0FBB500E7D93D /* InviteViewController.swift */,
 			);
 			name = Invite;
 			path = hgss/Modules/Invite;
@@ -265,13 +344,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				789753C41ED0792700228A33 /* Info.plist in Resources */,
+				78E541961ED0FBB500E7D93D /* ActiveOperationStoryboard.storyboard in Resources */,
 				2F9F6D5B1ED0C3670000388A /* ActiveAction.storyboard in Resources */,
 				2F9F6D561ED095500000388A /* LocationRowCell.xib in Resources */,
 				2F9F6D4B1ED084840000388A /* CreateAction.storyboard in Resources */,
 				2F9A80B01ED0745300E6A2FF /* LaunchScreen.storyboard in Resources */,
 				2F9A80AD1ED0745300E6A2FF /* Assets.xcassets in Resources */,
+				78E5419D1ED0FBB500E7D93D /* Invite.storyboard in Resources */,
 				2F9A80AB1ED0745300E6A2FF /* MainAction.storyboard in Resources */,
-				78F8ED651ED0F69C00ABD3ED /* Invite.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,14 +410,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78F8ED671ED0F69C00ABD3ED /* InviteViewController.swift in Sources */,
+				78E541951ED0FBB500E7D93D /* ActiveOperationFeedRootViewController.swift in Sources */,
 				789753C71ED07A3E00228A33 /* MainActionViewController.swift in Sources */,
+				78E541931ED0FBB500E7D93D /* AcriveOperationMapRootViewController.swift in Sources */,
+				78E541981ED0FBB500E7D93D /* ActiveOperationFeedTableViewController.swift in Sources */,
+				78E5419A1ED0FBB500E7D93D /* RemoteAPI.swift in Sources */,
+				78E5419E1ED0FBB500E7D93D /* InviteFormViewController.swift in Sources */,
+				78E5419B1ED0FBB500E7D93D /* OperationFeedModel.swift in Sources */,
+				78E5419C1ED0FBB500E7D93D /* OperationFeedTableViewCell.swift in Sources */,
+				78E541991ED0FBB500E7D93D /* ActiveOperationLeadFeedViewController.swift in Sources */,
+				78E5419F1ED0FBB500E7D93D /* InviteViewController.swift in Sources */,
 				2F9F6D521ED090130000388A /* LocationRow.swift in Sources */,
 				789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */,
-				78F8ED661ED0F69C00ABD3ED /* InviteFormViewController.swift in Sources */,
 				2F9F6D5F1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift in Sources */,
 				2F9F6D5D1ED0C3AB0000388A /* ActiveActionFormViewController.swift in Sources */,
 				2F9F6D491ED083E80000388A /* CreateActionFromViewController.swift in Sources */,
+				78E541941ED0FBB500E7D93D /* ActiveOperationDetailsRootViewController.swift in Sources */,
+				78E541971ED0FBB500E7D93D /* ActiveOperationTabBarViewController.swift in Sources */,
 				2F9F6D611ED0D7AE0000388A /* ParticipantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
