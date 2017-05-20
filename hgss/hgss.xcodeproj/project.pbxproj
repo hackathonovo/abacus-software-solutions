@@ -18,6 +18,14 @@
 		789753CE1ED07D6000228A33 /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753CD1ED07D6000228A33 /* LocationRow.swift */; };
 		789753D01ED0801C00228A33 /* LocationRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 789753CF1ED0801C00228A33 /* LocationRowCell.xib */; };
 		789753D21ED086FA00228A33 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753D11ED086FA00228A33 /* InviteViewController.swift */; };
+		789753D51ED0905000228A33 /* ActiveOperationTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753D41ED0905000228A33 /* ActiveOperationTabBarViewController.swift */; };
+		78F8ED3E1ED0952700ABD3ED /* ActiveOperationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F8ED3D1ED0952700ABD3ED /* ActiveOperationStoryboard.storyboard */; };
+		78F8ED401ED09DC500ABD3ED /* ActiveOperationFeedRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED3F1ED09DC500ABD3ED /* ActiveOperationFeedRootViewController.swift */; };
+		78F8ED421ED09DD700ABD3ED /* ActiveOperationDetailsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED411ED09DD700ABD3ED /* ActiveOperationDetailsRootViewController.swift */; };
+		78F8ED441ED09DE700ABD3ED /* AcriveOperationMapRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED431ED09DE700ABD3ED /* AcriveOperationMapRootViewController.swift */; };
+		78F8ED4C1ED0AE0E00ABD3ED /* ActiveOperationFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED4A1ED0AE0E00ABD3ED /* ActiveOperationFeedTableViewController.swift */; };
+		78F8ED4D1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED4B1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift */; };
+		78F8ED501ED0AE7200ABD3ED /* OperationFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED4F1ED0AE7200ABD3ED /* OperationFeedTableViewCell.swift */; };
 		F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +43,14 @@
 		789753CD1ED07D6000228A33 /* LocationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRow.swift; sourceTree = "<group>"; };
 		789753CF1ED0801C00228A33 /* LocationRowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationRowCell.xib; sourceTree = "<group>"; };
 		789753D11ED086FA00228A33 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+		789753D41ED0905000228A33 /* ActiveOperationTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationTabBarViewController.swift; sourceTree = "<group>"; };
+		78F8ED3D1ED0952700ABD3ED /* ActiveOperationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActiveOperationStoryboard.storyboard; sourceTree = "<group>"; };
+		78F8ED3F1ED09DC500ABD3ED /* ActiveOperationFeedRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationFeedRootViewController.swift; sourceTree = "<group>"; };
+		78F8ED411ED09DD700ABD3ED /* ActiveOperationDetailsRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationDetailsRootViewController.swift; sourceTree = "<group>"; };
+		78F8ED431ED09DE700ABD3ED /* AcriveOperationMapRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcriveOperationMapRootViewController.swift; sourceTree = "<group>"; };
+		78F8ED4A1ED0AE0E00ABD3ED /* ActiveOperationFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationFeedTableViewController.swift; sourceTree = "<group>"; };
+		78F8ED4B1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationLeadFeedViewController.swift; sourceTree = "<group>"; };
+		78F8ED4F1ED0AE7200ABD3ED /* OperationFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFeedTableViewCell.swift; sourceTree = "<group>"; };
 		B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.release.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.release.xcconfig"; sourceTree = "<group>"; };
 		FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hgss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +125,7 @@
 		789753BE1ED077C500228A33 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				789753D31ED08F4000228A33 /* ActiveOperation */,
 				789753C81ED07AD000228A33 /* Invite */,
 				789753C51ED07A2600228A33 /* Main */,
 			);
@@ -138,6 +155,38 @@
 			name = Invite;
 			path = hgss/Modules/Invite;
 			sourceTree = SOURCE_ROOT;
+		};
+		789753D31ED08F4000228A33 /* ActiveOperation */ = {
+			isa = PBXGroup;
+			children = (
+				78F8ED491ED0AE0E00ABD3ED /* ChildViewControllers */,
+				789753D41ED0905000228A33 /* ActiveOperationTabBarViewController.swift */,
+				78F8ED3D1ED0952700ABD3ED /* ActiveOperationStoryboard.storyboard */,
+				78F8ED3F1ED09DC500ABD3ED /* ActiveOperationFeedRootViewController.swift */,
+				78F8ED411ED09DD700ABD3ED /* ActiveOperationDetailsRootViewController.swift */,
+				78F8ED431ED09DE700ABD3ED /* AcriveOperationMapRootViewController.swift */,
+			);
+			name = ActiveOperation;
+			path = hgss/Modules/ActiveOperation;
+			sourceTree = SOURCE_ROOT;
+		};
+		78F8ED491ED0AE0E00ABD3ED /* ChildViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				78F8ED4E1ED0AE5A00ABD3ED /* Views */,
+				78F8ED4A1ED0AE0E00ABD3ED /* ActiveOperationFeedTableViewController.swift */,
+				78F8ED4B1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift */,
+			);
+			path = ChildViewControllers;
+			sourceTree = "<group>";
+		};
+		78F8ED4E1ED0AE5A00ABD3ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78F8ED4F1ED0AE7200ABD3ED /* OperationFeedTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -204,6 +253,7 @@
 			files = (
 				789753CA1ED07AE100228A33 /* Invite.storyboard in Resources */,
 				789753D01ED0801C00228A33 /* LocationRowCell.xib in Resources */,
+				78F8ED3E1ED0952700ABD3ED /* ActiveOperationStoryboard.storyboard in Resources */,
 				789753C41ED0792700228A33 /* Info.plist in Resources */,
 				2F9A80B01ED0745300E6A2FF /* LaunchScreen.storyboard in Resources */,
 				2F9A80AD1ED0745300E6A2FF /* Assets.xcassets in Resources */,
@@ -266,10 +316,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789753D51ED0905000228A33 /* ActiveOperationTabBarViewController.swift in Sources */,
+				78F8ED401ED09DC500ABD3ED /* ActiveOperationFeedRootViewController.swift in Sources */,
+				78F8ED4D1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift in Sources */,
 				789753CC1ED07AF100228A33 /* InviteFormViewController.swift in Sources */,
+				78F8ED441ED09DE700ABD3ED /* AcriveOperationMapRootViewController.swift in Sources */,
 				789753CE1ED07D6000228A33 /* LocationRow.swift in Sources */,
 				789753C71ED07A3E00228A33 /* ViewController.swift in Sources */,
+				78F8ED421ED09DD700ABD3ED /* ActiveOperationDetailsRootViewController.swift in Sources */,
+				78F8ED4C1ED0AE0E00ABD3ED /* ActiveOperationFeedTableViewController.swift in Sources */,
 				789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */,
+				78F8ED501ED0AE7200ABD3ED /* OperationFeedTableViewCell.swift in Sources */,
 				789753D21ED086FA00228A33 /* InviteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
