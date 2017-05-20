@@ -35,7 +35,6 @@ class ActiveOperationLeadFeedViewController: UIViewController {
         
         print("asdasda")
         
-        
         Alamofire.request("http://192.168.201.145:3000/api/mobile/feed/1").validate().responseJSON { response in
             print(response)
             if let json = response.result.value as? [String: Any]

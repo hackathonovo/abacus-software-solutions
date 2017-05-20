@@ -26,22 +26,21 @@ struct SingleFeedUpdate {
     let rescueId: Int
     let text:String
     let author:String
-    let createdAt:Date
-    let updatedAt:Date
+    let createdAt:Int
+    let updatedAt:Int
 }
 
 extension SingleFeedUpdate: Unboxable {
     init(unboxer: Unboxer) throws {
         self.id = try unboxer.unbox(key: "id")
-        self.rescueId = try unboxer.unbox(key: "rescue_action_id")
+        self.rescueId = try unboxer.unbox(key: "rescue_id")
         self.text = try unboxer.unbox(key: "text")
         self.author = try unboxer.unbox(key: "author")
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         
-        
-        self.createdAt = try unboxer.unbox(key: "created_at", formatter: dateFormatter)
-        self.updatedAt = try unboxer.unbox(key: "updated_at", formatter: dateFormatter)
+        self.createdAt = try unboxer.unbox(key: "created_at")
+        self.updatedAt = try unboxer.unbox(key: "updated_at")
     }
 }
