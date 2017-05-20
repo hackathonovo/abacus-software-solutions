@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  availability: MyText
+  phone_number: MyString
+  address_home: MyString
+  home_latitude: 1.5
+  home_longitude: 1.5
+  address_work: MyString
+  work_latitude: 1.5
+  work_longitude: 1.5
+  level: 
+
+two:
+  first_name: MyString
+  last_name: MyString
+  availability: MyText
+  phone_number: MyString
+  address_home: MyString
+  home_latitude: 1.5
+  home_longitude: 1.5
+  address_work: MyString
+  work_latitude: 1.5
+  work_longitude: 1.5
+  level: 

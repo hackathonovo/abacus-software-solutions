@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rescue action:</strong>
+  <%= @rescue_action_area.rescue_action %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rescue_action_area.name %>
+</p>
+
+<%= link_to 'Edit', edit_rescue_action_area_path(@rescue_action_area) %> |
+<%= link_to 'Back', rescue_action_areas_path %>

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @rescuer.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @rescuer.last_name %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @rescuer.availability %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @rescuer.phone_number %>
+</p>
+
+<p>
+  <strong>Address home:</strong>
+  <%= @rescuer.address_home %>
+</p>
+
+<p>
+  <strong>Home latitude:</strong>
+  <%= @rescuer.home_latitude %>
+</p>
+
+<p>
+  <strong>Home longitude:</strong>
+  <%= @rescuer.home_longitude %>
+</p>
+
+<p>
+  <strong>Address work:</strong>
+  <%= @rescuer.address_work %>
+</p>
+
+<p>
+  <strong>Work latitude:</strong>
+  <%= @rescuer.work_latitude %>
+</p>
+
+<p>
+  <strong>Work longitude:</strong>
+  <%= @rescuer.work_longitude %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @rescuer.level %>
+</p>
+
+<%= link_to 'Edit', edit_rescuer_path(@rescuer) %> |
+<%= link_to 'Back', rescuers_path %>

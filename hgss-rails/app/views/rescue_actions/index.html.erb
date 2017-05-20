@@ -1,0 +1,5 @@
+<%= hgss_data_header :rescue_actions %>
+
+<%= hgss_data_table [:lead, :kind, :start_position_latitude, :start_position_longitude,  :description ], @rescue_actions do |column, point| %>
+  <% point[column] %>
+<% end %>

@@ -1,0 +1,94 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+$brand-primary:         #2E85C5 !default;
+$brand-success:         #5cb85c !default;
+$brand-info:            #1381C3 !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+@import "bootstrap";
+@import "font-awesome";
+@import "rescue_actions";
+@import "select2/select2";
+@import "select2.bootstrap4";
+@import "noty";
+@import "font-awesome";
+
+.location-selector-component {
+	position: relative;
+}
+
+.location-selector-component .location-selector-component-form {
+	position: absolute;
+	top: 6px;
+	left: 140px;
+	right: 30px;
+	z-index: 1001;
+}
+
+html, body {
+	height: 100%;
+}
+
+body.normal-layout {
+	padding-top: 4.0rem;
+}
+
+body.wide-layout {
+	padding-top: 3.5rem;
+}
+
+.hgss-data-header {
+	display: flex;
+
+	align-items: center;
+
+	margin-bottom: 0.5rem;
+}
+
+.hgss-data-footer {
+	display: flex;
+
+	align-items: center;
+
+	margin-bottom: 0.5rem;
+}
+
+.hgss-data-footer .pagination {
+	margin-bottom: 0;
+}
+
+.of-scroll {
+	overflow: auto;
+}
+
+.row-actions a:not(:last-child) {
+	margin-right: 0.2rem;
+}
+
+.flx-left {
+	margin-right: auto;
+}
+
+.flx-right {
+	margin-left: auto;
+}
+
+// Styling autocomplete.
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+.avatar {
+	border-radius: 8px;
+}
+
+// Navbar
+//// Avatar
+.navbar .avatar {
+	margin-top: -8px;
+	margin-bottom: -8px;
+	height: 40px;
+}

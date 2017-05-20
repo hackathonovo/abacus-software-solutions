@@ -1,0 +1,10 @@
+<%= hgss_data_header :specialty %>
+
+<%= hgss_data_table [:name], @specialties do |column, point| %>
+  <% case column %>
+  <% when :name %>
+    <%= point.name %>
+  <% else %>
+    <% point[column] %>
+  <% end %>
+<% end %>

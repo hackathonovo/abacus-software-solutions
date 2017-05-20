@@ -1,0 +1,39 @@
+<%= simple_form_for(@rescue_action, :class => "h-100") do |f| %>
+<div class="row h-100">
+  <div class="col-8 h-100">
+    <div class="point-form-map-overlay">
+      <%= simple_fields_for :map do |nf| %>
+        <%= nf.input :search, :required => false, :label => false %>
+      <% end %>
+    </div>
+    <div class="map-component"
+      style="width: 100%; height: 100%;"
+      data-latitude-input="#rescue_action_start_position_latitude"
+      data-longitude-input="#rescue_action_start_position_longitude"
+    data-location-name-input="#map_search"></div>
+  </div>
+  <div class="col-4 h-100 of-scroll">
+    <%= f.error_notification %>
+    <div class="form-inputs point-form-inputs-panel">
+      <%= f.association :lead %>
+      <%= f.input :kind %>
+      <%= f.input :description, :input_html => {:rows => 10} %>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.input :start_position_latitude %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :start_position_longitude %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, :class => "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+<% end %>

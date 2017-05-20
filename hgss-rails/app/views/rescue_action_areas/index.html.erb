@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rescue Action Areas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rescue action</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rescue_action_areas.each do |rescue_action_area| %>
+      <tr>
+        <td><%= rescue_action_area.rescue_action %></td>
+        <td><%= rescue_action_area.name %></td>
+        <td><%= link_to 'Show', rescue_action_area %></td>
+        <td><%= link_to 'Edit', edit_rescue_action_area_path(rescue_action_area) %></td>
+        <td><%= link_to 'Destroy', rescue_action_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rescue Action Area', new_rescue_action_area_path %>

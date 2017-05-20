@@ -1,0 +1,28 @@
+form#new_point {
+	overflow: hidden !important;
+}
+
+.point-form-inputs-panel {
+	padding-top: 10px;
+}
+
+.point-form-map-overlay {
+	position: absolute;
+	top: 6px;
+	left: 140px;
+	right: 30px;
+	z-index: 1001;
+}
+
+.point-form-map {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.points-category-filter-nav {
+	margin-bottom: 15px;
+}
