@@ -14,11 +14,11 @@
   <tbody>
     <% @rescue_action_areas.each do |rescue_action_area| %>
       <tr>
-        <td><%= rescue_action_area.rescue_action %></td>
+        <td><%= rescue_action_area.rescue_action.id %></td>
         <td><%= rescue_action_area.name %></td>
-        <td><%= link_to 'Show', rescue_action_area %></td>
-        <td><%= link_to 'Edit', edit_rescue_action_area_path(rescue_action_area) %></td>
-        <td><%= link_to 'Destroy', rescue_action_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', rescue_action_area_path(@rescue_action.id, rescue_action_area) %></td>
+        <td><%= link_to 'Edit', edit_rescue_action_area_path(@rescue_action.id, rescue_action_area) %></td>
+        <td><%= link_to 'Destroy', rescue_action_area_path(@rescue_action.id, rescue_action_area), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

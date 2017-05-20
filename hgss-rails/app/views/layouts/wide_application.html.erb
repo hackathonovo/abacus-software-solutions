@@ -7,11 +7,15 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag '//maps.google.com/maps/api/js?key=AIzaSyBiW2d-FSKStrfYWSzxC2SAw_HUFssLWE4&libraries=places', 'data-turbolinks-eval': 'false' %>
+    <%= javascript_include_tag '//maps.google.com/maps/api/js?key=AIzaSyBiW2d-FSKStrfYWSzxC2SAw_HUFssLWE4&libraries=places,drawing', 'data-turbolinks-eval': 'false' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="wide-layout">  
+  <body 
+  class="wide-layout"
+  data-controller="<%= params[:controller] %>" 
+  data-action="<%= params[:action] %>">  
+  
     <%= render 'navbar' %>
     <div class="container-fluid h-100 pl-0">
       <%= yield %>

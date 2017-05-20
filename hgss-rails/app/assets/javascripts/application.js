@@ -18,7 +18,16 @@
 //= require jquery-locationpicker-plugin/locationpicker.jquery
 //= require jquery.autocomplete
 //= require noty
+//= require jsts
 //= require_tree .
+
+function getCurrentController() {
+    return $("body").data("controller");
+}
+
+function getCurrentAction() {
+    return $("body").data("action");
+}
 
 
 $(function() {
