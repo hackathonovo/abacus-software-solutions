@@ -68,6 +68,15 @@ gem 'simple_calendar', '~> 2.0'
 
 gem 'paperclip'
 
+gem 'sunspot_rails', '~> 2.2.7'
+
+gem 'sunspot_solr', '~> 2.2.6'
+
+gem 'houston'
+
+# APIs.
+gem 'grape'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

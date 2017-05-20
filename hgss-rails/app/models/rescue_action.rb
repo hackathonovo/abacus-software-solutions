@@ -6,4 +6,15 @@ class RescueAction < ApplicationRecord
 	default_scope -> { order('updated_at DESC') }
 
 	belongs_to :lead, class_name: "Rescuer"
+
+	searchable do
+		text :description
+		text :lead_name do
+      		lead.name
+    	end
+
+		string :description
+	end
+
+	enum kind: [:search, :rescue]
 end

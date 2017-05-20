@@ -50,7 +50,7 @@ $(function() {
     });
 
     $("#search_input").devbridgeAutocomplete({
-        serviceUrl: '/api/autocomplete/model/test/query',
+        serviceUrl: '/api/autocomplete/model/' + getCurrentController() + '/query',
         minChars: 3,
         autoSelectFirst: false,
         triggerSelectOnValidInput: false,

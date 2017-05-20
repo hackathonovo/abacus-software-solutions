@@ -1,29 +1,37 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Rescue Action Areas</h1>
-
-<table>
+<div class="hgss-data-header">
+  <h1 class="hgss-data-title flx-left">Rescue action areas</h1>
+  <a class="btn btn-lg btn-primary hgss-data-new-record flx-right" href="/rescue_actions/<%= params[:rescue_action_id] %>/areas/new">
+    <i class="fa fa-plus-circle"></i> New
+  </a>
+</div>
+<table class="table">
   <thead>
     <tr>
-      <th>Rescue action</th>
+      <th width="250px">Map</th>
       <th>Name</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
-
   <tbody>
-    <% @rescue_action_areas.each do |rescue_action_area| %>
-      <tr>
-        <td><%= rescue_action_area.rescue_action.id %></td>
-        <td><%= rescue_action_area.name %></td>
-        <td><%= link_to 'Show', rescue_action_area_path(@rescue_action.id, rescue_action_area) %></td>
-        <td><%= link_to 'Edit', edit_rescue_action_area_path(@rescue_action.id, rescue_action_area) %></td>
-        <td><%= link_to 'Destroy', rescue_action_area_path(@rescue_action.id, rescue_action_area), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% @rescue_action_areas.each do |area| %>
+    <tr>
+      <td>
+        <%= image_tag(area.map_url) %>
+      </td>
+      <td>
+        <%= area.name %>
+      </td>
+      <td width="207px">
+        <div class="d-flex justify-content-end row-actions">
+          <a class="btn btn-outline-primary" href="/rescue_actions/<%= params[:rescue_action_id] %>/areas/<%= area.id %>/edit">
+            <i class="fa fa-pencil"></i> Edit
+          </a>
+          <a data-confirm="Are you sure?" class="btn btn-outline-danger" rel="nofollow" data-method="delete" href="/rescue_actions/<%= params[:rescue_action_id] %>/areas/<%= area.id %>">
+            <i class="fa fa-trash"></i>
+          </a>
+        </div>
+      </td>
+    </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Rescue Action Area', new_rescue_action_area_path %>

@@ -7,13 +7,15 @@ $(function() {
 
         $("form").submit(function(e) {
             $("#rescue_action_area_points").text(JSON.stringify(getCoordinates()));
+            $("#rescue_action_area_latitude").val(map.center.lat());
+            $("#rescue_action_area_longitude").val(map.center.lng());
+            $("#rescue_action_area_zoom_level").val(map.zoom);
         })
     }
 });
 
-
-
 var all_overlays = [];
+var map;
 
 function getCoordinates() {
     return all_overlays[0].getPath().getArray().map(function name(coord) {
@@ -39,9 +41,29 @@ function loadRectangleMap() {
     }
 
     function initialize() {
-        var map = new google.maps.Map(document.getElementById('poly-map-component'), {
-            zoom: 16,
-            center: new google.maps.LatLng(45.793636, 15.970199),
+        var zoomInputValue = $("#rescue_action_area_zoom_level").val();
+        var mapZoom = parseFloat(zoomInputValue);
+        if (zoomInputValue.length == 0) {
+            mapZoom = 16.0;
+        }
+
+        var latitudeInputValue = $("#rescue_action_area_latitude").val();
+        var latitude = parseFloat(latitudeInputValue);
+        if (latitudeInputValue.length == 0) {
+            latitude = 45.793636;
+        }
+
+        var longitudeInputValue = $("#rescue_action_area_longitude").val();
+        var longitude = parseFloat(longitudeInputValue);
+        if (longitudeInputValue.length == 0) {
+            longitude = 15.970199;
+        }
+
+        console.log(mapZoom, latitude, longitude);
+
+        map = new google.maps.Map(document.getElementById('poly-map-component'), {
+            zoom: mapZoom,
+            center: new google.maps.LatLng(latitude, longitude),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             disableDefaultUI: true,
             zoomControl: true

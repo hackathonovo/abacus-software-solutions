@@ -16,7 +16,7 @@
     <%= f.error_notification %>
     <div class="form-inputs point-form-inputs-panel">
       <%= f.association :lead %>
-      <%= f.input :kind %>
+      <%= f.input :kind, collection: RescueAction.kinds.keys.to_a %>
       <%= f.input :description, :input_html => {:rows => 10} %>
       <div class="row">
         <div class="col-md-12">

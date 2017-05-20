@@ -6,7 +6,7 @@ class RescueActionAreasController < ApplicationController
   # GET /rescue_action_areas
   # GET /rescue_action_areas.json
   def index
-    @rescue_action_areas = RescueActionArea.all
+    @rescue_action_areas = RescueActionArea.where(rescue_action_id: params[:rescue_action_id])
   end
 
   # GET /rescue_action_areas/1
@@ -85,6 +85,6 @@ class RescueActionAreasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rescue_action_area_params
-      params.require(:rescue_action_area).permit(:name, :points)
+      params.require(:rescue_action_area).permit(:name, :points, :latitude, :longitude, :zoom_level)
     end
 end
