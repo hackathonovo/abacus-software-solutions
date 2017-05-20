@@ -41,11 +41,17 @@ gem 'font-awesome-rails'
 # User authentication.
 gem 'devise'
 
+gem 'nested_scaffold'
+
 # Bootstrap 4 style.
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 # Easier paging.
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
+
+gem 'geokit-rails'
+
+gem 'geocoder'
  
 # Bootstrap 4 uses tether.js for positioning popovers, add if you need that.
 source 'https://rails-assets.org' do

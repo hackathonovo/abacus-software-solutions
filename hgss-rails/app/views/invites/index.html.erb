@@ -1,0 +1,25 @@
+<h1>Listing invites</h1>
+
+<table>
+  <tr>
+    <th>Rescuer</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @invites.each do |invite| %>
+  <tr>
+    <td><%= invite.rescuer_id %></td>
+    <td><%= invite.status %></td>
+    <td><%= link_to 'Show', [invite.rescue_action, invite] %></td>
+    <td><%= link_to 'Edit', edit_rescue_action_invite_path(invite.rescue_action, invite) %></td>
+    <td><%= link_to 'Destroy', [invite.rescue_action, invite], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Invite', new_rescue_action_invite_path(params[:rescue_action_id]) %>

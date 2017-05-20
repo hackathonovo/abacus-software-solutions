@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @feed_item.text %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @feed_item.author %>
+</p>
+
+
+<%= link_to 'Edit', edit_rescue_action_feed_item_path(@feed_item.rescue_action, @feed_item) %> |
+<%= link_to 'Back', rescue_action_feed_items_path(@feed_item.rescue_action) %>

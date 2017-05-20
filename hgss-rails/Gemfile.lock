@@ -84,6 +84,11 @@ GEM
     ffi (1.9.18)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
+    geocoder (1.4.4)
+    geokit (1.10.0)
+    geokit-rails (2.2.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     grape (0.19.1)
@@ -143,6 +148,7 @@ GEM
       tool (~> 0.2)
     mustermann-grape (0.4.0)
       mustermann (= 0.4.0)
+    nested_scaffold (1.0.0)
     nio4r (2.0.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
@@ -272,12 +278,15 @@ DEPENDENCIES
   colorize
   devise
   font-awesome-rails
+  geocoder
+  geokit-rails
   grape
   houston
   jbuilder (~> 2.5)
   jquery-rails
   kaminari (~> 1.0, >= 1.0.1)
   listen (~> 3.0.5)
+  nested_scaffold
   paperclip
   pg
   pry

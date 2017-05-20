@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rescue_action: one
+  rescuer_id: 1
+  status: 1
+
+two:
+  rescue_action: two
+  rescuer_id: 1
+  status: 1

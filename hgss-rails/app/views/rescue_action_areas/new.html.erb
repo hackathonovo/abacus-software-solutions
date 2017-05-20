@@ -13,10 +13,10 @@
     <%= f.error_notification %>
     <div class="form-inputs point-form-inputs-panel">
       <%= f.input :name %>
-      <%= f.input :points, as: :hidden %>
-      <%= f.input :latitude, as: :hidden, input_html: {value: @rescue_action.start_position_latitude} %>
-      <%= f.input :longitude, as: :hidden, input_html: {value: @rescue_action.start_position_longitude} %>
-      <%= f.input :zoom_level, as: :hidden, input_html: {value: 16} %>
+      <%= f.input :points, :wrapper_html => {:style => "display: none;"} %>
+      <%= f.input :latitude, :wrapper_html => {:style => "display: none;"} %>
+      <%= f.input :longitude, :wrapper_html => {:style => "display: none;"} %>
+      <%= f.input :zoom_level, :wrapper_html => {:style => "display: none;"} %>
     </div>
     <div class="form-actions">
       <%= f.button :submit, :class => "btn btn-primary" %>

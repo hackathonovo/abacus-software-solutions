@@ -4,15 +4,27 @@ $(function() {
 
     if (currentController == "rescue_action_areas") {
         loadRectangleMap();
-
-        $("form").submit(function(e) {
-            $("#rescue_action_area_points").text(JSON.stringify(getCoordinates()));
-            $("#rescue_action_area_latitude").val(map.center.lat());
-            $("#rescue_action_area_longitude").val(map.center.lng());
-            $("#rescue_action_area_zoom_level").val(map.zoom);
-        })
+        $("form.simple_form").on('submit', prepareFormForSubmit);
     }
 });
+
+function prepareFormForSubmit(e) {
+    e.preventDefault();
+
+    console.log("1");
+    const pointsJson = JSON.stringify(getCoordinates());
+    $("#rescue_action_area_points").val(pointsJson);
+    $("#rescue_action_area_latitude").val(map.center.lat());
+    console.log("2");
+    $("#rescue_action_area_longitude").val(map.center.lng());
+    console.log("3");
+    $("#rescue_action_area_zoom_level").val(map.zoom);
+    console.log("4");
+
+    console.log("5");
+    $("form.simple_form").off("submit", prepareFormForSubmit);
+    $("form.simple_form").submit();
+}
 
 var all_overlays = [];
 var map;
@@ -66,7 +78,8 @@ function loadRectangleMap() {
             center: new google.maps.LatLng(latitude, longitude),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             disableDefaultUI: true,
-            zoomControl: true
+            zoomControl: true,
+            styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
         });
 
         const pointsText = $("#rescue_action_area_points").text();
@@ -160,3 +173,4 @@ function loadRectangleMap() {
 
     google.maps.event.addDomListener(window, 'load', initialize);
 }
+

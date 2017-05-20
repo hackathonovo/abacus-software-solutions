@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170520165328) do
+ActiveRecord::Schema.define(version: 20170520184404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "areas_rescuers", id: false, force: :cascade do |t|
+    t.integer "area_id",    null: false
+    t.integer "rescuer_id", null: false
+  end
+
+  create_table "feed_items", force: :cascade do |t|
+    t.integer  "rescue_action_id"
+    t.text     "text"
+    t.string   "author"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["rescue_action_id"], name: "index_feed_items_on_rescue_action_id", using: :btree
+  end
+
+  create_table "invites", force: :cascade do |t|
+    t.integer  "rescue_action_id"
+    t.integer  "rescuer_id"
+    t.integer  "status"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["rescue_action_id"], name: "index_invites_on_rescue_action_id", using: :btree
+  end
 
   create_table "rescue_action_area_points", force: :cascade do |t|
     t.integer  "rescue_action_area_id"
@@ -23,15 +46,6 @@ ActiveRecord::Schema.define(version: 20170520165328) do
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.index ["rescue_action_area_id"], name: "index_rescue_action_area_points_on_rescue_action_area_id", using: :btree
-  end
-
-  create_table "rescue_action_area_rescuers", force: :cascade do |t|
-    t.integer  "rescue_action_area_id"
-    t.integer  "rescuer_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.index ["rescue_action_area_id"], name: "index_rescue_action_area_rescuers_on_rescue_action_area_id", using: :btree
-    t.index ["rescuer_id"], name: "index_rescue_action_area_rescuers_on_rescuer_id", using: :btree
   end
 
   create_table "rescue_action_areas", force: :cascade do |t|
@@ -44,6 +58,11 @@ ActiveRecord::Schema.define(version: 20170520165328) do
     t.float    "longitude"
     t.float    "zoom_level"
     t.index ["rescue_action_id"], name: "index_rescue_action_areas_on_rescue_action_id", using: :btree
+  end
+
+  create_table "rescue_action_areas_rescuers", id: false, force: :cascade do |t|
+    t.integer "rescue_action_area_id", null: false
+    t.integer "rescuer_id",            null: false
   end
 
   create_table "rescue_actions", force: :cascade do |t|
@@ -122,9 +141,9 @@ ActiveRecord::Schema.define(version: 20170520165328) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "feed_items", "rescue_actions"
+  add_foreign_key "invites", "rescue_actions"
   add_foreign_key "rescue_action_area_points", "rescue_action_areas"
-  add_foreign_key "rescue_action_area_rescuers", "rescue_action_areas"
-  add_foreign_key "rescue_action_area_rescuers", "rescuers"
   add_foreign_key "rescue_action_areas", "rescue_actions"
   add_foreign_key "rescue_member_locations", "rescue_members"
   add_foreign_key "rescue_members", "rescuers"

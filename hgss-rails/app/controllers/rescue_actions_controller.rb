@@ -6,7 +6,7 @@ class RescueActionsController < ApplicationController
   # GET /rescue_actions.json
   def index
     if not params[:search].nil?
-      search = RescueAction.search do
+      search = RescueAction.solr_search do
         keywords params[:search]
         paginate :page => params[:page], :per_page => 15
       end
