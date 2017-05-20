@@ -13,6 +13,11 @@
 		789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753BF1ED0788D00228A33 /* AppDelegate.swift */; };
 		789753C41ED0792700228A33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 789753C31ED0792700228A33 /* Info.plist */; };
 		789753C71ED07A3E00228A33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753C61ED07A3E00228A33 /* ViewController.swift */; };
+		789753CA1ED07AE100228A33 /* Invite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789753C91ED07AE100228A33 /* Invite.storyboard */; };
+		789753CC1ED07AF100228A33 /* InviteFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753CB1ED07AF100228A33 /* InviteFormViewController.swift */; };
+		789753CE1ED07D6000228A33 /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753CD1ED07D6000228A33 /* LocationRow.swift */; };
+		789753D01ED0801C00228A33 /* LocationRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 789753CF1ED0801C00228A33 /* LocationRowCell.xib */; };
+		789753D21ED086FA00228A33 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753D11ED086FA00228A33 /* InviteViewController.swift */; };
 		F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +30,11 @@
 		789753BF1ED0788D00228A33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789753C31ED0792700228A33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		789753C61ED07A3E00228A33 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		789753C91ED07AE100228A33 /* Invite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Invite.storyboard; sourceTree = "<group>"; };
+		789753CB1ED07AF100228A33 /* InviteFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFormViewController.swift; sourceTree = "<group>"; };
+		789753CD1ED07D6000228A33 /* LocationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRow.swift; sourceTree = "<group>"; };
+		789753CF1ED0801C00228A33 /* LocationRowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationRowCell.xib; sourceTree = "<group>"; };
+		789753D11ED086FA00228A33 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.release.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.release.xcconfig"; sourceTree = "<group>"; };
 		FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hgss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +109,7 @@
 		789753BE1ED077C500228A33 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				789753C81ED07AD000228A33 /* Invite */,
 				789753C51ED07A2600228A33 /* Main */,
 			);
 			name = Modules;
@@ -113,6 +124,19 @@
 			);
 			name = Main;
 			path = hgss/Modules/Main;
+			sourceTree = SOURCE_ROOT;
+		};
+		789753C81ED07AD000228A33 /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				789753C91ED07AE100228A33 /* Invite.storyboard */,
+				789753CB1ED07AF100228A33 /* InviteFormViewController.swift */,
+				789753CD1ED07D6000228A33 /* LocationRow.swift */,
+				789753CF1ED0801C00228A33 /* LocationRowCell.xib */,
+				789753D11ED086FA00228A33 /* InviteViewController.swift */,
+			);
+			name = Invite;
+			path = hgss/Modules/Invite;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -178,6 +202,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789753CA1ED07AE100228A33 /* Invite.storyboard in Resources */,
+				789753D01ED0801C00228A33 /* LocationRowCell.xib in Resources */,
 				789753C41ED0792700228A33 /* Info.plist in Resources */,
 				2F9A80B01ED0745300E6A2FF /* LaunchScreen.storyboard in Resources */,
 				2F9A80AD1ED0745300E6A2FF /* Assets.xcassets in Resources */,
@@ -240,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789753CC1ED07AF100228A33 /* InviteFormViewController.swift in Sources */,
+				789753CE1ED07D6000228A33 /* LocationRow.swift in Sources */,
 				789753C71ED07A3E00228A33 /* ViewController.swift in Sources */,
 				789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */,
+				789753D21ED086FA00228A33 /* InviteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

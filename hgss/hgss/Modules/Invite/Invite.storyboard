@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uWD-50-MmM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Invite View Controller-->
+        <scene sceneID="eQp-wO-8BC">
+            <objects>
+                <viewController id="nHh-6L-2Kb" customClass="InviteViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V0D-gL-glD"/>
+                        <viewControllerLayoutGuide type="bottom" id="xuX-ho-VbV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yVC-J3-2lO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2q-fg-rha">
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <connections>
+                                    <segue destination="KvA-tS-Rpw" kind="embed" id="cOy-Ej-uAY"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGK-4A-1bi">
+                                <rect key="frame" x="-0.5" y="603" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7j-9h-2sr">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="64"/>
+                                        <state key="normal" title="Odbaci"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me9-vf-9J7">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="64"/>
+                                        <state key="normal" title="Prihvati"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="F4D-fs-46X"/>
+                                    <constraint firstAttribute="trailing" secondItem="me9-vf-9J7" secondAttribute="trailing" id="GLE-EL-Zm1"/>
+                                    <constraint firstItem="me9-vf-9J7" firstAttribute="width" secondItem="KGK-4A-1bi" secondAttribute="width" multiplier="0.5" id="J8I-HJ-AXS"/>
+                                    <constraint firstItem="U7j-9h-2sr" firstAttribute="leading" secondItem="KGK-4A-1bi" secondAttribute="leading" id="Jnl-eC-lkC"/>
+                                    <constraint firstItem="U7j-9h-2sr" firstAttribute="width" secondItem="KGK-4A-1bi" secondAttribute="width" multiplier="0.5" id="gGb-CO-zR4"/>
+                                    <constraint firstItem="me9-vf-9J7" firstAttribute="height" secondItem="KGK-4A-1bi" secondAttribute="height" id="gps-bD-6p9"/>
+                                    <constraint firstItem="U7j-9h-2sr" firstAttribute="centerY" secondItem="KGK-4A-1bi" secondAttribute="centerY" id="hH4-gT-vid"/>
+                                    <constraint firstItem="U7j-9h-2sr" firstAttribute="height" secondItem="KGK-4A-1bi" secondAttribute="height" id="iZE-s3-vSo"/>
+                                    <constraint firstItem="me9-vf-9J7" firstAttribute="centerY" secondItem="KGK-4A-1bi" secondAttribute="centerY" id="ziq-Sq-39x"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r2q-fg-rha" firstAttribute="centerY" secondItem="yVC-J3-2lO" secondAttribute="centerY" id="Dci-c7-gXB"/>
+                            <constraint firstItem="r2q-fg-rha" firstAttribute="width" secondItem="yVC-J3-2lO" secondAttribute="width" id="FjG-Ll-Do7"/>
+                            <constraint firstItem="xuX-ho-VbV" firstAttribute="top" secondItem="KGK-4A-1bi" secondAttribute="bottom" id="L8N-As-pcI"/>
+                            <constraint firstItem="r2q-fg-rha" firstAttribute="centerX" secondItem="yVC-J3-2lO" secondAttribute="centerX" id="Nvd-RE-Mia"/>
+                            <constraint firstItem="KGK-4A-1bi" firstAttribute="centerX" secondItem="yVC-J3-2lO" secondAttribute="centerX" id="VOu-cV-9YP"/>
+                            <constraint firstItem="KGK-4A-1bi" firstAttribute="width" secondItem="yVC-J3-2lO" secondAttribute="width" id="mVP-Cv-Tvu"/>
+                            <constraint firstItem="r2q-fg-rha" firstAttribute="top" secondItem="V0D-gL-glD" secondAttribute="bottom" id="qPM-h4-wsb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6xL-3l-9DE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fm0-r2-bra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="84.107946026986511"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Yb-CL-MEk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uWD-50-MmM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dui-OS-iOp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nHh-6L-2Kb" kind="relationship" relationship="rootViewController" id="3x4-Sz-A0c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcc-Qr-EqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="84.107946026986511"/>
+        </scene>
+        <!--Invite Form View Controller-->
+        <scene sceneID="SEb-cU-qSQ">
+            <objects>
+                <viewController id="KvA-tS-Rpw" customClass="InviteFormViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qRG-YI-XHh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bin-72-pLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579" y="354"/>
+        </scene>
+    </scenes>
+</document>
