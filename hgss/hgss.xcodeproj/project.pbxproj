@@ -12,6 +12,7 @@
 		2F9A80AB1ED0745300E6A2FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80A91ED0745300E6A2FF /* Main.storyboard */; };
 		2F9A80AD1ED0745300E6A2FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80AC1ED0745300E6A2FF /* Assets.xcassets */; };
 		2F9A80B01ED0745300E6A2FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80AE1ED0745300E6A2FF /* LaunchScreen.storyboard */; };
+		F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		2F9A80AC1ED0745300E6A2FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F9A80AF1ED0745300E6A2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F9A80B11ED0745300E6A2FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54DD42FE28EDBA0CFA578CBD /* Pods-hgss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.debug.xcconfig"; sourceTree = "<group>"; };
+		B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.release.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.release.xcconfig"; sourceTree = "<group>"; };
+		FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hgss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				2F9A80A41ED0745300E6A2FF /* hgss */,
 				2F9A80A31ED0745300E6A2FF /* Products */,
+				584B173F9738C3F1E9B96859 /* Pods */,
+				5EFDD4CDEB9FE17E76FBFEAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = hgss;
 			sourceTree = "<group>";
 		};
+		584B173F9738C3F1E9B96859 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54DD42FE28EDBA0CFA578CBD /* Pods-hgss.debug.xcconfig */,
+				B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5EFDD4CDEB9FE17E76FBFEAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F9A80B41ED0745300E6A2FF /* Build configuration list for PBXNativeTarget "hgss" */;
 			buildPhases = (
+				4DE43A50D687A887596C7B94 /* [CP] Check Pods Manifest.lock */,
 				2F9A809E1ED0745300E6A2FF /* Sources */,
 				2F9A809F1ED0745300E6A2FF /* Frameworks */,
 				2F9A80A01ED0745300E6A2FF /* Resources */,
+				C8912A3A88F82A8B3C283D8C /* [CP] Embed Pods Frameworks */,
+				A62E1D96C0A9C16EE3DE07FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DE43A50D687A887596C7B94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A62E1D96C0A9C16EE3DE07FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hgss/Pods-hgss-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8912A3A88F82A8B3C283D8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hgss/Pods-hgss-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F9A809E1ED0745300E6A2FF /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		2F9A80B51ED0745300E6A2FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54DD42FE28EDBA0CFA578CBD /* Pods-hgss.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A972R7QKSK;
@@ -272,6 +348,7 @@
 		};
 		2F9A80B61ED0745300E6A2FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A972R7QKSK;
