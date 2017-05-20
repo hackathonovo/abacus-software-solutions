@@ -15,10 +15,9 @@
 		2F9F6D4D1ED0878A0000388A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9F6D4C1ED0878A0000388A /* MapKit.framework */; };
 		2F9F6D521ED090130000388A /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D511ED090130000388A /* LocationRow.swift */; };
 		2F9F6D561ED095500000388A /* LocationRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9F6D551ED095500000388A /* LocationRowCell.xib */; };
-		2F9F6D5B1ED0C3670000388A /* ActiveAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9F6D5A1ED0C3670000388A /* ActiveAction.storyboard */; };
-		2F9F6D5D1ED0C3AB0000388A /* ActiveActionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D5C1ED0C3AB0000388A /* ActiveActionFormViewController.swift */; };
-		2F9F6D5F1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D5E1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift */; };
-		2F9F6D611ED0D7AE0000388A /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D601ED0D7AE0000388A /* ParticipantTableViewCell.swift */; };
+		788177641ED109A400C26C57 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177631ED109A400C26C57 /* ParticipantTableViewCell.swift */; };
+		788177671ED109AD00C26C57 /* ActiveActionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177651ED109AD00C26C57 /* ActiveActionFormViewController.swift */; };
+		788177681ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177661ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift */; };
 		789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753BF1ED0788D00228A33 /* AppDelegate.swift */; };
 		789753C41ED0792700228A33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 789753C31ED0792700228A33 /* Info.plist */; };
 		789753C71ED07A3E00228A33 /* MainActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753C61ED07A3E00228A33 /* MainActionViewController.swift */; };
@@ -48,11 +47,10 @@
 		2F9F6D4C1ED0878A0000388A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2F9F6D511ED090130000388A /* LocationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationRow.swift; path = Helpers/Eureka/LocationRow.swift; sourceTree = "<group>"; };
 		2F9F6D551ED095500000388A /* LocationRowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocationRowCell.xib; path = Helpers/Eureka/LocationRowCell.xib; sourceTree = "<group>"; };
-		2F9F6D5A1ED0C3670000388A /* ActiveAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ActiveAction.storyboard; path = hgss/Modules/ActiveAction/ActiveAction.storyboard; sourceTree = SOURCE_ROOT; };
-		2F9F6D5C1ED0C3AB0000388A /* ActiveActionFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveActionFormViewController.swift; path = hgss/Modules/ActiveAction/ActiveActionFormViewController.swift; sourceTree = SOURCE_ROOT; };
-		2F9F6D5E1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewtParticipantsTableViewController.swift; path = hgss/Modules/ActiveAction/PreviewtParticipantsTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		2F9F6D601ED0D7AE0000388A /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticipantTableViewCell.swift; path = hgss/Modules/ActiveAction/ParticipantTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		54DD42FE28EDBA0CFA578CBD /* Pods-hgss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.debug.xcconfig"; sourceTree = "<group>"; };
+		788177631ED109A400C26C57 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
+		788177651ED109AD00C26C57 /* ActiveActionFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveActionFormViewController.swift; path = ChildViewControllers/ActiveActionFormViewController.swift; sourceTree = "<group>"; };
+		788177661ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewtParticipantsTableViewController.swift; path = ChildViewControllers/PreviewtParticipantsTableViewController.swift; sourceTree = "<group>"; };
 		789753BF1ED0788D00228A33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789753C31ED0792700228A33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		789753C61ED07A3E00228A33 /* MainActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActionViewController.swift; sourceTree = "<group>"; };
@@ -150,17 +148,6 @@
 			name = LocationRow;
 			sourceTree = "<group>";
 		};
-		2F9F6D591ED0C2F40000388A /* ActiveAction */ = {
-			isa = PBXGroup;
-			children = (
-				2F9F6D5A1ED0C3670000388A /* ActiveAction.storyboard */,
-				2F9F6D5C1ED0C3AB0000388A /* ActiveActionFormViewController.swift */,
-				2F9F6D5E1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift */,
-				2F9F6D601ED0D7AE0000388A /* ParticipantTableViewCell.swift */,
-			);
-			name = ActiveAction;
-			sourceTree = "<group>";
-		};
 		584B173F9738C3F1E9B96859 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +180,6 @@
 			children = (
 				78E5417F1ED0FBB500E7D93D /* ActiveOperation */,
 				78E5418F1ED0FBB500E7D93D /* Invite */,
-				2F9F6D591ED0C2F40000388A /* ActiveAction */,
 				2F09358A1ED07E9300468C55 /* CreateAction */,
 				789753C51ED07A2600228A33 /* MainAction */,
 			);
@@ -214,6 +200,8 @@
 		78E5417F1ED0FBB500E7D93D /* ActiveOperation */ = {
 			isa = PBXGroup;
 			children = (
+				788177651ED109AD00C26C57 /* ActiveActionFormViewController.swift */,
+				788177661ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift */,
 				78E541801ED0FBB500E7D93D /* AcriveOperationMapRootViewController.swift */,
 				78E541811ED0FBB500E7D93D /* ActiveOperationDetailsRootViewController.swift */,
 				78E541821ED0FBB500E7D93D /* ActiveOperationFeedRootViewController.swift */,
@@ -265,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				78E5418E1ED0FBB500E7D93D /* OperationFeedTableViewCell.swift */,
+				788177631ED109A400C26C57 /* ParticipantTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,7 +334,6 @@
 			files = (
 				789753C41ED0792700228A33 /* Info.plist in Resources */,
 				78E541961ED0FBB500E7D93D /* ActiveOperationStoryboard.storyboard in Resources */,
-				2F9F6D5B1ED0C3670000388A /* ActiveAction.storyboard in Resources */,
 				2F9F6D561ED095500000388A /* LocationRowCell.xib in Resources */,
 				2F9F6D4B1ED084840000388A /* CreateAction.storyboard in Resources */,
 				2F9A80B01ED0745300E6A2FF /* LaunchScreen.storyboard in Resources */,
@@ -413,21 +401,21 @@
 				78E541951ED0FBB500E7D93D /* ActiveOperationFeedRootViewController.swift in Sources */,
 				789753C71ED07A3E00228A33 /* MainActionViewController.swift in Sources */,
 				78E541931ED0FBB500E7D93D /* AcriveOperationMapRootViewController.swift in Sources */,
+				788177681ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift in Sources */,
 				78E541981ED0FBB500E7D93D /* ActiveOperationFeedTableViewController.swift in Sources */,
 				78E5419A1ED0FBB500E7D93D /* RemoteAPI.swift in Sources */,
 				78E5419E1ED0FBB500E7D93D /* InviteFormViewController.swift in Sources */,
+				788177671ED109AD00C26C57 /* ActiveActionFormViewController.swift in Sources */,
 				78E5419B1ED0FBB500E7D93D /* OperationFeedModel.swift in Sources */,
 				78E5419C1ED0FBB500E7D93D /* OperationFeedTableViewCell.swift in Sources */,
 				78E541991ED0FBB500E7D93D /* ActiveOperationLeadFeedViewController.swift in Sources */,
 				78E5419F1ED0FBB500E7D93D /* InviteViewController.swift in Sources */,
 				2F9F6D521ED090130000388A /* LocationRow.swift in Sources */,
+				788177641ED109A400C26C57 /* ParticipantTableViewCell.swift in Sources */,
 				789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */,
-				2F9F6D5F1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift in Sources */,
-				2F9F6D5D1ED0C3AB0000388A /* ActiveActionFormViewController.swift in Sources */,
 				2F9F6D491ED083E80000388A /* CreateActionFromViewController.swift in Sources */,
 				78E541941ED0FBB500E7D93D /* ActiveOperationDetailsRootViewController.swift in Sources */,
 				78E541971ED0FBB500E7D93D /* ActiveOperationTabBarViewController.swift in Sources */,
-				2F9F6D611ED0D7AE0000388A /* ParticipantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

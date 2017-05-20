@@ -106,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pba-RK-TOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1010.4" y="1599.8500749625189"/>
+            <point key="canvasLocation" x="458" y="1490"/>
         </scene>
         <!--Active Operation Lead Feed View Controller-->
         <scene sceneID="gkh-vv-1Vc">
@@ -218,26 +218,6 @@
             </objects>
             <point key="canvasLocation" x="-239.19999999999999" y="1490.1049475262371"/>
         </scene>
-        <!--Detalji-->
-        <scene sceneID="Nha-sq-YvR">
-            <objects>
-                <viewController id="hem-tk-uMH" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="u3j-9r-6Im"/>
-                        <viewControllerLayoutGuide type="bottom" id="iyp-Ma-wBF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="enN-L1-5zh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Detalji" image="tabbar_details_icon" id="KVZ-QR-k4t"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3sr-TH-yLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="639" y="732"/>
-        </scene>
         <!--Karta-->
         <scene sceneID="2LD-em-gCt">
             <objects>
@@ -270,16 +250,94 @@
                     </tabBar>
                     <connections>
                         <segue destination="5qI-WE-Azw" kind="relationship" relationship="viewControllers" id="u6e-Oa-PIC"/>
-                        <segue destination="hem-tk-uMH" kind="relationship" relationship="viewControllers" id="hgk-Be-lii"/>
                         <segue destination="HqU-PQ-Wgo" kind="relationship" relationship="viewControllers" id="eyp-IZ-76M"/>
+                        <segue destination="g4L-sy-PL3" kind="relationship" relationship="viewControllers" id="TpL-X6-hmO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVv-va-r6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="639" y="-128"/>
         </scene>
+        <!--Detalji-->
+        <scene sceneID="0V2-lM-J42">
+            <objects>
+                <viewController id="g4L-sy-PL3" customClass="ActiveActionFormViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="56w-Kc-5k8"/>
+                        <viewControllerLayoutGuide type="bottom" id="nKq-Z2-Bvm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qj9-Ao-APJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Detalji" image="tabbar_details_icon" id="YOX-7L-0mD"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="WHh-T6-Vsf" kind="show" identifier="PreviewtParticipantsSegue" id="EAf-gb-sZd">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujW-Jw-CTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1431" y="-60"/>
+        </scene>
+        <!--Previewt Participants Table View Controller-->
+        <scene sceneID="hUb-BZ-wiM">
+            <objects>
+                <tableViewController id="WHh-T6-Vsf" customClass="PreviewtParticipantsTableViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cLv-m8-ec4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParticipantCell" id="7a9-F6-jpL" customClass="ParticipantTableViewCell" customModule="hgss" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7a9-F6-jpL" id="TQO-Fa-s5Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pero Perić" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5B-mr-4Ze">
+                                            <rect key="frame" x="23" y="12" width="78.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYZ-rz-w0c">
+                                            <rect key="frame" x="324" y="6" width="35" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="PhoneCall"/>
+                                            <connections>
+                                                <action selector="callParticipant:" destination="7a9-F6-jpL" eventType="touchUpInside" id="24d-7M-hJJ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="k5B-mr-4Ze" firstAttribute="leading" secondItem="TQO-Fa-s5Y" secondAttribute="leadingMargin" constant="15" id="9Hx-fb-Elb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="k5B-mr-4Ze" secondAttribute="bottom" constant="3" id="AEX-WO-DgU"/>
+                                        <constraint firstItem="k5B-mr-4Ze" firstAttribute="top" secondItem="TQO-Fa-s5Y" secondAttribute="topMargin" constant="4" id="VQa-Ae-get"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fullName" destination="k5B-mr-4Ze" id="x4r-h9-j7Q"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WHh-T6-Vsf" id="5Ia-x8-vLi"/>
+                            <outlet property="delegate" destination="WHh-T6-Vsf" id="l4C-zT-qqA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPL-br-9Q4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1585" y="810"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="PhoneCall" width="22" height="22"/>
         <image name="tabbar_details_icon" width="50" height="50"/>
         <image name="tabbar_feed_icon" width="50" height="50"/>
         <image name="tabbar_map_icon" width="50" height="50"/>
