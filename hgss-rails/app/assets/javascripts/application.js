@@ -20,7 +20,6 @@
 //= require noty
 //= require jsts
 //= require_tree .
-
 function getCurrentController() {
     return $("body").data("controller");
 }
@@ -28,27 +27,21 @@ function getCurrentController() {
 function getCurrentAction() {
     return $("body").data("action");
 }
-
-
 $(function() {
-	function search() {
+    function search() {
         const searchValue = $("#search_input").val();
-
         const newLocationOriginPathName = window.location.origin + window.location.pathname;
         const newLocationSearch = `?search=${searchValue}`;
         const newLocation = newLocationOriginPathName + newLocationSearch;
-
         window.location = newLocation;
     }
 
     function navigateToPoint(id) {
         window.location = `/points/${id}`;
     }
-
     $('button[data-href]').click(function() {
         window.location = $(this).data("href");
     });
-
     $("#search_input").devbridgeAutocomplete({
         serviceUrl: '/api/autocomplete/model/' + getCurrentController() + '/query',
         minChars: 3,
@@ -58,58 +51,53 @@ $(function() {
             search();
         }
     });
-
     $("#search_form").on("submit", function(e) {
         e.preventDefault();
         search();
     });
-
     $("#search_button").click(function() {
         search();
     });
-
-    $('select').select2({
+    $('select:not(.rescue_select)').select2({
         theme: "bootstrap",
         tags: true
+    });
+    $('.rescue_select').select2({
+        theme: "bootstrap",
+        dataType: 'json',
+        ajax: {
+            url: '/api/autocomplete/model/rescuers/query'
+        }
     });
 
     function zoomMapToCloseLevel() {
         const mapElement = $('.map-component')[0];
         const map = window.locationPicker.data("locationpicker").map;
-
         map.setZoom(15);
     }
-
     $('.map-component').each(function() {
         const $element = $(this);
-
         var latitude, longitude;
-
         const latitudeInput = $($element.data("latitude-input"));
         const longitudeInput = $($element.data("longitude-input"));
         const locationNameInput = $($element.data("location-name-input"));
-
         locationNameInput.keypress(function(event) {
             if (event.keyCode == 13) {
                 event.preventDefault();
             }
         });
-
         const latitudeInputValue = latitudeInput.val();
         const longitudeInputValue = longitudeInput.val();
-
         if (latitudeInputValue.length != 0) {
             latitude = latitudeInputValue;
         } else {
             latitude = 45.793636;
         }
-
         if (longitudeInputValue.length != 0) {
             longitude = longitudeInputValue;
         } else {
             longitude = 15.970199;
         }
-
         const locationPicker = $element.locationpicker({
             // Bind inputs given from element data.
             inputBinding: {
@@ -124,28 +112,23 @@ $(function() {
                 longitude: longitude
             },
             onchanged: function(currentLocation, radius, isMarkerDropped) {
-            	if (!isMarkerDropped)
-                	zoomMapToCloseLevel();
+                if (!isMarkerDropped)
+                    zoomMapToCloseLevel();
             }
         });
-
         window.locationPicker = locationPicker;
     });
-
-    $('.nav-tabs a').click(function (e) {
+    $('.nav-tabs a').click(function(e) {
         e.preventDefault()
         $(this).tab('show');
         $('.map-component').each(function() {
             const mapElement = $(this);
             const $mapElement = $(mapElement);
             const map = window.locationPicker.data("locationpicker").map;
-
             const latitudeInput = $($mapElement.data("latitude-input"));
             const longitudeInput = $($mapElement.data("longitude-input"));
-
             const latitudeInputValue = latitudeInput.val();
             const longitudeInputValue = longitudeInput.val();
-
             if (latitudeInputValue.length != 0) {
                 latitude = latitudeInputValue;
                 zoom = 16;
@@ -153,40 +136,32 @@ $(function() {
                 latitude = 45.793636;
                 zoom = 8;
             }
-
             if (longitudeInputValue.length != 0) {
                 longitude = longitudeInputValue;
             } else {
                 longitude = 15.970199;
             }
-
             var center = new google.maps.LatLng(latitude, longitude);
             map.panTo(center);
             map.setZoom(zoom);
             google.maps.event.trigger(map, 'resize');
         });
     });
-
     $(window).ready(function() {
         const formElement = $(".new_rescue_action,.edit_rescue_action");
         if (formElement.offset() != undefined) {
             const topOffset = formElement.offset().top;
             formElement.height($(window).height() - topOffset);
-
             const mapElement = $('.map-component')[0];
             const $mapElement = $($('.map-component')[0]);
             const map = window.locationPicker.data("locationpicker").map;
-
             google.maps.event.trigger(mapElement, 'resize');
-
             var latitude, longitude, zoom;
-            
+
             const latitudeInput = $($mapElement.data("latitude-input"));
             const longitudeInput = $($mapElement.data("longitude-input"));
-
             const latitudeInputValue = latitudeInput.val();
             const longitudeInputValue = longitudeInput.val();
-
             if (latitudeInputValue.length != 0) {
                 latitude = latitudeInputValue;
                 zoom = 16;
@@ -194,38 +169,29 @@ $(function() {
                 latitude = 45.793636;
                 zoom = 8;
             }
-
             if (longitudeInputValue.length != 0) {
                 longitude = longitudeInputValue;
             } else {
                 longitude = 15.970199;
             }
-
             var center = new google.maps.LatLng(latitude, longitude);
             map.panTo(center);
             map.setZoom(zoom);
-
             window.locationPicker.data("locationpicker");
         }
-
         $(window).resize(function() {
             const formElement = $(".new_rescue_action,.edit_rescue_action");
             if (formElement.offset() != undefined) {
                 const topOffset = formElement.offset().top;
                 formElement.height($(window).height() - topOffset);
-
                 const mapElement = $('.map-component')[0];
                 const $mapElement = $($('.map-component')[0]);
                 const map = window.locationPicker.data("locationpicker").map;
-
                 google.maps.event.trigger(mapElement, 'resize');
-
                 const latitudeInput = $($mapElement.data("latitude-input"));
                 const longitudeInput = $($mapElement.data("longitude-input"));
-
                 const latitude = latitudeInput.val();
                 const longitude = longitudeInput.val();
-
                 var center = new google.maps.LatLng(latitude, longitude);
                 // using global variable:
                 map.panTo(center);

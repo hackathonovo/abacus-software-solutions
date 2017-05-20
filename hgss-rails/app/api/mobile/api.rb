@@ -7,7 +7,7 @@ def render_rescue_action(rescue_action)
     }
   end
   
-  {
+  { :data => {
     :id => rescue_action.id,
     :location => {
       :latitude => rescue_action.start_position_latitude,
@@ -18,9 +18,27 @@ def render_rescue_action(rescue_action)
       :phone_number => rescue_action.lead.phone_number
     },
     :team_members => team_members,
-    :start_time => rescue_action.created_at,
+    :start_time => rescue_action.created_at.to_time.to_i,
     :description => rescue_action.description
+  }}
+end
+
+def render_feed_item(feed_item)
+  {
+    :id => feed_item.id,
+    :rescue_id => feed_item.rescue_action_id,
+    :text => feed_item.text,
+    :author => feed_item.author,
+    :created_at => feed_item.created_at.to_time.to_i,
+    :updated_at => feed_item.updated_at.to_time.to_i
   }
+end
+
+def render_feed_items(feed_items)
+  map = feed_items.map do |feed_item|
+    render_feed_item(feed_item)
+  end
+  map
 end
 
 module Mobile
@@ -33,7 +51,7 @@ module Mobile
     get 'feed/:rescue_action_id' do
       rescue_action_id = params[:rescue_action_id]
       rescue_action = RescueAction.find(rescue_action_id)
-      rescue_action.feed_items
+      {:data => render_feed_items(rescue_action.feed_items) }
     end
 
     
@@ -61,14 +79,14 @@ module Mobile
       polygon_points = nil
       polygon_points = JSON.parse(area.points) if not area.nil?
 
-      {
+      {:data => {
         :location => {
           :latitude => rescue_action.start_position_latitude,
           :longitude => rescue_action.start_position_longitude
         },
 
         :polygon => polygon_points
-      }
+      }}
     end
 
     params do
@@ -84,13 +102,15 @@ module Mobile
         fulltext query
       end
 
-      search.results.map do |r|
+      sr = search.results.map do |r|
         {
           :name => r.name,
           :phone_number => r.phone_number,
           :distance => Geocoder::Calculations.distance_between([latitude,longitude], [r.home_latitude,r.home_longitude])
         }
       end
+
+      {:data => sr}
     end
 
     params do
@@ -140,7 +160,7 @@ module Mobile
       rescue_action = RescueAction.find(rescue_action_id)
       feed_item = FeedItem.new({:rescue_action => rescue_action, :text => text, :author => author})
       feed_item.save!
-      feed_item
+      {:data => feed_item}
     end
   end
 end

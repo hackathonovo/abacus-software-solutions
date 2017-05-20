@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'own_invites/index'
+
   resources :rescue_actions do
     resources :invites
   end

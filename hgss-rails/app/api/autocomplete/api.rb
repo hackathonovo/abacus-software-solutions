@@ -4,16 +4,41 @@ module Autocomplete
 
     format :json
 
+    get '/autocomplete/model/rescuers/query' do
+      rescuers = Rescuer.search do
+        keywords params[:q]
+        paginate :page => 1, :per_page => 15
+      end
+
+      results = rescuers.results.map do |r|
+        {:id => r.id, :text => r.name}
+      end
+
+      {:results => results}
+    end
+
     get '/autocomplete/model/:model/query' do
       query = params[:query]
+      query = params[:q] if query.nil?
+
       model = params[:model]
       model_class = model.camelize.singularize.constantize
-      search = model_class.search do
-        fulltext query do
-          highlight :description
-          #highlight :address
+
+      search = nil
+      if model == "rescuers"
+        search = model_class.solr_search do
+          fulltext query do
+          end
+          paginate :page => 1, :per_page => 5
         end
-        paginate :page => 1, :per_page => 5
+      else
+        search = model_class.solr_search do
+          fulltext query do
+            highlight :description
+            #highlight :address
+          end
+          paginate :page => 1, :per_page => 5
+        end
       end
 
       search_hits_highlights = search.hits.flat_map do |hit|

@@ -1,7 +1,7 @@
 class RescueAction < ApplicationRecord
   	has_many :invites, dependent: :destroy
 	has_many :feed_items, dependent: :destroy
-	has_many :rescue_actions, dependent: :destroy
+	has_many :rescue_action_areas, dependent: :destroy
 
 	# Number of items per page.
 	paginates_per 15

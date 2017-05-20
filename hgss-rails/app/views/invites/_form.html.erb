@@ -1,25 +1,8 @@
-<%= form_for([@invite.rescue_action, @invite]) do |f| %>
-  <% if @invite.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@invite.errors.count, "error") %> prohibited this invite from being saved:</h2>
-
-      <ul>
-      <% @invite.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= simple_form_for([@invite.rescue_action, @invite]) do |f| %>
   <div class="field">
-    <%= f.label :rescuer_id %><br />
-    <%= f.number_field :rescuer_id %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.number_field :status %>
+    <%= f.association :rescuer, :input_html => {:class => "rescue_select"} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit, :class => "btn btn-primary" %>
   </div>
 <% end %>
