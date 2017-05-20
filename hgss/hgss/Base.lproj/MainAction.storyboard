@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EIB-85-jJl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Action View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainActionViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UV-sn-AzS">
+                                <rect key="frame" x="120" y="266.5" width="135" height="135"/>
+                                <color key="backgroundColor" red="0.86572533845901489" green="0.24001580476760864" blue="0.075166083872318268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="9sV-LY-NXH"/>
+                                    <constraint firstAttribute="height" constant="135" id="Dt3-yr-0Ha"/>
+                                </constraints>
+                                <state key="normal" image="CreateAction">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ILb-2k-O7r" kind="show" id="Rn1-qL-Noc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kreiraj akciju" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oft-1j-Otb">
+                                <rect key="frame" x="101" y="190" width="173" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10227034240961075" green="0.57927387952804565" blue="0.81710439920425415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6UV-sn-AzS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0LV-ta-VYV"/>
+                            <constraint firstItem="oft-1j-Otb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qSP-EI-oiZ"/>
+                            <constraint firstItem="6UV-sn-AzS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rIR-W9-Pbq"/>
+                            <constraint firstItem="6UV-sn-AzS" firstAttribute="top" secondItem="oft-1j-Otb" secondAttribute="bottom" constant="39.5" id="ttC-Hn-NKl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xXP-lE-g7W"/>
+                    <connections>
+                        <outlet property="btnCreateAction" destination="6UV-sn-AzS" id="MNc-sv-FVE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839.20000000000005" y="123.68815592203899"/>
+        </scene>
+        <!--CreateAction-->
+        <scene sceneID="DRZ-aa-bx6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateAction" id="ILb-2k-O7r" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fC4-Tb-Yr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Nx-U9-E3V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EIB-85-jJl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2NV-pH-OMC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f5R-oa-rIx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9NN-xP-74z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CreateAction" width="170" height="170"/>
+    </resources>
+</document>

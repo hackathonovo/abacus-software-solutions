@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gI0-wH-uc1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Active Action Form View Controller-->
+        <scene sceneID="R8D-D1-3ld">
+            <objects>
+                <viewController id="gI0-wH-uc1" customClass="ActiveActionFormViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ex4-w1-bvy"/>
+                        <viewControllerLayoutGuide type="bottom" id="R5L-4S-0Dh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hvT-bw-tKf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="9nU-Wa-iS8" kind="show" identifier="PreviewtParticipantsSegue" id="TIZ-rj-F4M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nG4-Pw-Vyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="85"/>
+        </scene>
+        <!--Previewt Participants Table View Controller-->
+        <scene sceneID="VPf-ze-jPz">
+            <objects>
+                <tableViewController id="9nU-Wa-iS8" customClass="PreviewtParticipantsTableViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1cC-iR-Nio">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParticipantCell" id="nzm-hR-GEf" customClass="ParticipantTableViewCell" customModule="hgss" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nzm-hR-GEf" id="sqv-Gt-LnB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pero Perić" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKt-gL-HkS">
+                                            <rect key="frame" x="23" y="12" width="78.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UO-PL-7Fe">
+                                            <rect key="frame" x="324" y="6" width="35" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="PhoneCall"/>
+                                            <connections>
+                                                <action selector="callParticipant:" destination="nzm-hR-GEf" eventType="touchUpInside" id="Y4c-4H-zjs"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tKt-gL-HkS" secondAttribute="bottom" constant="3" id="5Pl-LQ-Yz4"/>
+                                        <constraint firstItem="tKt-gL-HkS" firstAttribute="top" secondItem="sqv-Gt-LnB" secondAttribute="topMargin" constant="4" id="XFy-Vv-2FV"/>
+                                        <constraint firstItem="tKt-gL-HkS" firstAttribute="leading" secondItem="sqv-Gt-LnB" secondAttribute="leadingMargin" constant="15" id="mvu-5a-3XK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fullName" destination="tKt-gL-HkS" id="K9Y-jK-rnC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9nU-Wa-iS8" id="tIy-Wt-Eld"/>
+                            <outlet property="delegate" destination="9nU-Wa-iS8" id="y39-oG-Mjm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3q-h3-tjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PhoneCall" width="22" height="22"/>
+    </resources>
+</document>

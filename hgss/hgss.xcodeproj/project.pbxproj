@@ -7,24 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F9A80AB1ED0745300E6A2FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80A91ED0745300E6A2FF /* Main.storyboard */; };
+		2F9A80AB1ED0745300E6A2FF /* MainAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80A91ED0745300E6A2FF /* MainAction.storyboard */; };
 		2F9A80AD1ED0745300E6A2FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80AC1ED0745300E6A2FF /* Assets.xcassets */; };
 		2F9A80B01ED0745300E6A2FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80AE1ED0745300E6A2FF /* LaunchScreen.storyboard */; };
+		2F9F6D491ED083E80000388A /* CreateActionFromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D481ED083E80000388A /* CreateActionFromViewController.swift */; };
+		2F9F6D4B1ED084840000388A /* CreateAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9F6D4A1ED084840000388A /* CreateAction.storyboard */; };
+		2F9F6D4D1ED0878A0000388A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9F6D4C1ED0878A0000388A /* MapKit.framework */; };
+		2F9F6D521ED090130000388A /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D511ED090130000388A /* LocationRow.swift */; };
+		2F9F6D561ED095500000388A /* LocationRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9F6D551ED095500000388A /* LocationRowCell.xib */; };
+		2F9F6D5B1ED0C3670000388A /* ActiveAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9F6D5A1ED0C3670000388A /* ActiveAction.storyboard */; };
+		2F9F6D5D1ED0C3AB0000388A /* ActiveActionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D5C1ED0C3AB0000388A /* ActiveActionFormViewController.swift */; };
+		2F9F6D5F1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D5E1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift */; };
+		2F9F6D611ED0D7AE0000388A /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D601ED0D7AE0000388A /* ParticipantTableViewCell.swift */; };
 		789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753BF1ED0788D00228A33 /* AppDelegate.swift */; };
 		789753C41ED0792700228A33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 789753C31ED0792700228A33 /* Info.plist */; };
-		789753C71ED07A3E00228A33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753C61ED07A3E00228A33 /* ViewController.swift */; };
+		789753C71ED07A3E00228A33 /* MainActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753C61ED07A3E00228A33 /* MainActionViewController.swift */; };
 		F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F9A80A21ED0745300E6A2FF /* hgss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hgss.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F9A80AA1ED0745300E6A2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2F9A80AA1ED0745300E6A2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainAction.storyboard; sourceTree = "<group>"; };
 		2F9A80AC1ED0745300E6A2FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F9A80AF1ED0745300E6A2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F9F6D481ED083E80000388A /* CreateActionFromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateActionFromViewController.swift; path = hgss/Modules/CreateAction/CreateActionFromViewController.swift; sourceTree = SOURCE_ROOT; };
+		2F9F6D4A1ED084840000388A /* CreateAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateAction.storyboard; path = hgss/Modules/CreateAction/CreateAction.storyboard; sourceTree = SOURCE_ROOT; };
+		2F9F6D4C1ED0878A0000388A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2F9F6D511ED090130000388A /* LocationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationRow.swift; path = Helpers/Eureka/LocationRow.swift; sourceTree = "<group>"; };
+		2F9F6D551ED095500000388A /* LocationRowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocationRowCell.xib; path = Helpers/Eureka/LocationRowCell.xib; sourceTree = "<group>"; };
+		2F9F6D5A1ED0C3670000388A /* ActiveAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ActiveAction.storyboard; path = hgss/Modules/ActiveAction/ActiveAction.storyboard; sourceTree = SOURCE_ROOT; };
+		2F9F6D5C1ED0C3AB0000388A /* ActiveActionFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveActionFormViewController.swift; path = hgss/Modules/ActiveAction/ActiveActionFormViewController.swift; sourceTree = SOURCE_ROOT; };
+		2F9F6D5E1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewtParticipantsTableViewController.swift; path = hgss/Modules/ActiveAction/PreviewtParticipantsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		2F9F6D601ED0D7AE0000388A /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticipantTableViewCell.swift; path = hgss/Modules/ActiveAction/ParticipantTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		54DD42FE28EDBA0CFA578CBD /* Pods-hgss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.debug.xcconfig"; sourceTree = "<group>"; };
 		789753BF1ED0788D00228A33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789753C31ED0792700228A33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		789753C61ED07A3E00228A33 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		789753C61ED07A3E00228A33 /* MainActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActionViewController.swift; sourceTree = "<group>"; };
 		B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.release.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.release.xcconfig"; sourceTree = "<group>"; };
 		FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hgss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -34,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9F6D4D1ED0878A0000388A /* MapKit.framework in Frameworks */,
 				F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F09358A1ED07E9300468C55 /* CreateAction */ = {
+			isa = PBXGroup;
+			children = (
+				2F9F6D481ED083E80000388A /* CreateActionFromViewController.swift */,
+				2F9F6D4A1ED084840000388A /* CreateAction.storyboard */,
+			);
+			name = CreateAction;
+			sourceTree = "<group>";
+		};
 		2F9A80991ED0745300E6A2FF = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +90,49 @@
 		2F9A80A41ED0745300E6A2FF /* hgss */ = {
 			isa = PBXGroup;
 			children = (
+				2F9F6D4F1ED08FED0000388A /* Helpers */,
 				789753C31ED0792700228A33 /* Info.plist */,
 				789753BE1ED077C500228A33 /* Modules */,
 				789753BD1ED077B400228A33 /* Common */,
 				2F9A80AC1ED0745300E6A2FF /* Assets.xcassets */,
 			);
 			path = hgss;
+			sourceTree = "<group>";
+		};
+		2F9F6D4F1ED08FED0000388A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F9F6D501ED08FF50000388A /* Eureka */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		2F9F6D501ED08FF50000388A /* Eureka */ = {
+			isa = PBXGroup;
+			children = (
+				2F9F6D581ED0B3310000388A /* LocationRow */,
+			);
+			name = Eureka;
+			sourceTree = "<group>";
+		};
+		2F9F6D581ED0B3310000388A /* LocationRow */ = {
+			isa = PBXGroup;
+			children = (
+				2F9F6D551ED095500000388A /* LocationRowCell.xib */,
+				2F9F6D511ED090130000388A /* LocationRow.swift */,
+			);
+			name = LocationRow;
+			sourceTree = "<group>";
+		};
+		2F9F6D591ED0C2F40000388A /* ActiveAction */ = {
+			isa = PBXGroup;
+			children = (
+				2F9F6D5A1ED0C3670000388A /* ActiveAction.storyboard */,
+				2F9F6D5C1ED0C3AB0000388A /* ActiveActionFormViewController.swift */,
+				2F9F6D5E1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift */,
+				2F9F6D601ED0D7AE0000388A /* ParticipantTableViewCell.swift */,
+			);
+			name = ActiveAction;
 			sourceTree = "<group>";
 		};
 		584B173F9738C3F1E9B96859 /* Pods */ = {
@@ -82,6 +147,7 @@
 		5EFDD4CDEB9FE17E76FBFEAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F9F6D4C1ED0878A0000388A /* MapKit.framework */,
 				FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */,
 			);
 			name = Frameworks;
@@ -99,19 +165,21 @@
 		789753BE1ED077C500228A33 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				789753C51ED07A2600228A33 /* Main */,
+				2F9F6D591ED0C2F40000388A /* ActiveAction */,
+				2F09358A1ED07E9300468C55 /* CreateAction */,
+				789753C51ED07A2600228A33 /* MainAction */,
 			);
 			name = Modules;
 			path = Common/Modules;
 			sourceTree = "<group>";
 		};
-		789753C51ED07A2600228A33 /* Main */ = {
+		789753C51ED07A2600228A33 /* MainAction */ = {
 			isa = PBXGroup;
 			children = (
-				2F9A80A91ED0745300E6A2FF /* Main.storyboard */,
-				789753C61ED07A3E00228A33 /* ViewController.swift */,
+				2F9A80A91ED0745300E6A2FF /* MainAction.storyboard */,
+				789753C61ED07A3E00228A33 /* MainActionViewController.swift */,
 			);
-			name = Main;
+			name = MainAction;
 			path = hgss/Modules/Main;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -179,9 +247,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				789753C41ED0792700228A33 /* Info.plist in Resources */,
+				2F9F6D5B1ED0C3670000388A /* ActiveAction.storyboard in Resources */,
+				2F9F6D561ED095500000388A /* LocationRowCell.xib in Resources */,
+				2F9F6D4B1ED084840000388A /* CreateAction.storyboard in Resources */,
 				2F9A80B01ED0745300E6A2FF /* LaunchScreen.storyboard in Resources */,
 				2F9A80AD1ED0745300E6A2FF /* Assets.xcassets in Resources */,
-				2F9A80AB1ED0745300E6A2FF /* Main.storyboard in Resources */,
+				2F9A80AB1ED0745300E6A2FF /* MainAction.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +271,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A62E1D96C0A9C16EE3DE07FE /* [CP] Copy Pods Resources */ = {
@@ -240,20 +311,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				789753C71ED07A3E00228A33 /* ViewController.swift in Sources */,
+				789753C71ED07A3E00228A33 /* MainActionViewController.swift in Sources */,
+				2F9F6D521ED090130000388A /* LocationRow.swift in Sources */,
 				789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */,
+				2F9F6D5F1ED0D4BA0000388A /* PreviewtParticipantsTableViewController.swift in Sources */,
+				2F9F6D5D1ED0C3AB0000388A /* ActiveActionFormViewController.swift in Sources */,
+				2F9F6D491ED083E80000388A /* CreateActionFromViewController.swift in Sources */,
+				2F9F6D611ED0D7AE0000388A /* ParticipantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2F9A80A91ED0745300E6A2FF /* Main.storyboard */ = {
+		2F9A80A91ED0745300E6A2FF /* MainAction.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2F9A80AA1ED0745300E6A2FF /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainAction.storyboard;
 			path = ../..;
 			sourceTree = "<group>";
 		};
