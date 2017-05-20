@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F9A80A81ED0745300E6A2FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A80A71ED0745300E6A2FF /* ViewController.swift */; };
 		2F9A80AB1ED0745300E6A2FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80A91ED0745300E6A2FF /* Main.storyboard */; };
 		2F9A80AD1ED0745300E6A2FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80AC1ED0745300E6A2FF /* Assets.xcassets */; };
 		2F9A80B01ED0745300E6A2FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A80AE1ED0745300E6A2FF /* LaunchScreen.storyboard */; };
 		789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753BF1ED0788D00228A33 /* AppDelegate.swift */; };
 		789753C41ED0792700228A33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 789753C31ED0792700228A33 /* Info.plist */; };
+		789753C71ED07A3E00228A33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753C61ED07A3E00228A33 /* ViewController.swift */; };
 		F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F9A80A21ED0745300E6A2FF /* hgss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hgss.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F9A80A71ED0745300E6A2FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2F9A80AA1ED0745300E6A2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F9A80AC1ED0745300E6A2FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F9A80AF1ED0745300E6A2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54DD42FE28EDBA0CFA578CBD /* Pods-hgss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.debug.xcconfig"; sourceTree = "<group>"; };
 		789753BF1ED0788D00228A33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789753C31ED0792700228A33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		789753C61ED07A3E00228A33 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.release.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.release.xcconfig"; sourceTree = "<group>"; };
 		FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hgss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,8 +65,6 @@
 				789753C31ED0792700228A33 /* Info.plist */,
 				789753BE1ED077C500228A33 /* Modules */,
 				789753BD1ED077B400228A33 /* Common */,
-				2F9A80A71ED0745300E6A2FF /* ViewController.swift */,
-				2F9A80A91ED0745300E6A2FF /* Main.storyboard */,
 				2F9A80AC1ED0745300E6A2FF /* Assets.xcassets */,
 			);
 			path = hgss;
@@ -101,10 +99,21 @@
 		789753BE1ED077C500228A33 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				789753C51ED07A2600228A33 /* Main */,
 			);
 			name = Modules;
 			path = Common/Modules;
 			sourceTree = "<group>";
+		};
+		789753C51ED07A2600228A33 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2F9A80A91ED0745300E6A2FF /* Main.storyboard */,
+				789753C61ED07A3E00228A33 /* ViewController.swift */,
+			);
+			name = Main;
+			path = hgss/Modules/Main;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -231,8 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789753C71ED07A3E00228A33 /* ViewController.swift in Sources */,
 				789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */,
-				2F9A80A81ED0745300E6A2FF /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +254,7 @@
 				2F9A80AA1ED0745300E6A2FF /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		2F9A80AE1ED0745300E6A2FF /* LaunchScreen.storyboard */ = {
