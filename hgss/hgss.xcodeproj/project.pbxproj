@@ -21,7 +21,16 @@
 		2F9F6D611ED0D7AE0000388A /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D601ED0D7AE0000388A /* ParticipantTableViewCell.swift */; };
 		789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753BF1ED0788D00228A33 /* AppDelegate.swift */; };
 		789753C41ED0792700228A33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 789753C31ED0792700228A33 /* Info.plist */; };
+<<<<<<< HEAD
 		789753C71ED07A3E00228A33 /* MainActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753C61ED07A3E00228A33 /* MainActionViewController.swift */; };
+=======
+		789753C71ED07A3E00228A33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753C61ED07A3E00228A33 /* ViewController.swift */; };
+		789753CA1ED07AE100228A33 /* Invite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789753C91ED07AE100228A33 /* Invite.storyboard */; };
+		789753CC1ED07AF100228A33 /* InviteFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753CB1ED07AF100228A33 /* InviteFormViewController.swift */; };
+		789753CE1ED07D6000228A33 /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753CD1ED07D6000228A33 /* LocationRow.swift */; };
+		789753D01ED0801C00228A33 /* LocationRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 789753CF1ED0801C00228A33 /* LocationRowCell.xib */; };
+		789753D21ED086FA00228A33 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753D11ED086FA00228A33 /* InviteViewController.swift */; };
+>>>>>>> ios/feature/screen_invite
 		F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +51,16 @@
 		54DD42FE28EDBA0CFA578CBD /* Pods-hgss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.debug.xcconfig"; sourceTree = "<group>"; };
 		789753BF1ED0788D00228A33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789753C31ED0792700228A33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		789753C61ED07A3E00228A33 /* MainActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActionViewController.swift; sourceTree = "<group>"; };
+=======
+		789753C61ED07A3E00228A33 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		789753C91ED07AE100228A33 /* Invite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Invite.storyboard; sourceTree = "<group>"; };
+		789753CB1ED07AF100228A33 /* InviteFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFormViewController.swift; sourceTree = "<group>"; };
+		789753CD1ED07D6000228A33 /* LocationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRow.swift; sourceTree = "<group>"; };
+		789753CF1ED0801C00228A33 /* LocationRowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationRowCell.xib; sourceTree = "<group>"; };
+		789753D11ED086FA00228A33 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+>>>>>>> ios/feature/screen_invite
 		B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.release.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.release.xcconfig"; sourceTree = "<group>"; };
 		FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hgss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,9 +183,14 @@
 		789753BE1ED077C500228A33 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				2F9F6D591ED0C2F40000388A /* ActiveAction */,
 				2F09358A1ED07E9300468C55 /* CreateAction */,
 				789753C51ED07A2600228A33 /* MainAction */,
+=======
+				789753C81ED07AD000228A33 /* Invite */,
+				789753C51ED07A2600228A33 /* Main */,
+>>>>>>> ios/feature/screen_invite
 			);
 			name = Modules;
 			path = Common/Modules;
@@ -181,6 +204,19 @@
 			);
 			name = MainAction;
 			path = hgss/Modules/Main;
+			sourceTree = SOURCE_ROOT;
+		};
+		789753C81ED07AD000228A33 /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				789753C91ED07AE100228A33 /* Invite.storyboard */,
+				789753CB1ED07AF100228A33 /* InviteFormViewController.swift */,
+				789753CD1ED07D6000228A33 /* LocationRow.swift */,
+				789753CF1ED0801C00228A33 /* LocationRowCell.xib */,
+				789753D11ED086FA00228A33 /* InviteViewController.swift */,
+			);
+			name = Invite;
+			path = hgss/Modules/Invite;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -246,6 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789753CA1ED07AE100228A33 /* Invite.storyboard in Resources */,
+				789753D01ED0801C00228A33 /* LocationRowCell.xib in Resources */,
 				789753C41ED0792700228A33 /* Info.plist in Resources */,
 				2F9F6D5B1ED0C3670000388A /* ActiveAction.storyboard in Resources */,
 				2F9F6D561ED095500000388A /* LocationRowCell.xib in Resources */,
@@ -311,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				789753C71ED07A3E00228A33 /* MainActionViewController.swift in Sources */,
 				2F9F6D521ED090130000388A /* LocationRow.swift in Sources */,
 				789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */,
@@ -318,6 +357,13 @@
 				2F9F6D5D1ED0C3AB0000388A /* ActiveActionFormViewController.swift in Sources */,
 				2F9F6D491ED083E80000388A /* CreateActionFromViewController.swift in Sources */,
 				2F9F6D611ED0D7AE0000388A /* ParticipantTableViewCell.swift in Sources */,
+=======
+				789753CC1ED07AF100228A33 /* InviteFormViewController.swift in Sources */,
+				789753CE1ED07D6000228A33 /* LocationRow.swift in Sources */,
+				789753C71ED07A3E00228A33 /* ViewController.swift in Sources */,
+				789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */,
+				789753D21ED086FA00228A33 /* InviteViewController.swift in Sources */,
+>>>>>>> ios/feature/screen_invite
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
