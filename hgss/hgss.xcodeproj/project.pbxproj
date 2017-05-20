@@ -26,6 +26,8 @@
 		78F8ED4C1ED0AE0E00ABD3ED /* ActiveOperationFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED4A1ED0AE0E00ABD3ED /* ActiveOperationFeedTableViewController.swift */; };
 		78F8ED4D1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED4B1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift */; };
 		78F8ED501ED0AE7200ABD3ED /* OperationFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED4F1ED0AE7200ABD3ED /* OperationFeedTableViewCell.swift */; };
+		78F8ED531ED0DA7C00ABD3ED /* OperationFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED521ED0DA7C00ABD3ED /* OperationFeedModel.swift */; };
+		78F8ED571ED0DCA900ABD3ED /* RemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8ED561ED0DCA900ABD3ED /* RemoteAPI.swift */; };
 		F4E649E728949F62C7F0142D /* Pods_hgss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		78F8ED4A1ED0AE0E00ABD3ED /* ActiveOperationFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationFeedTableViewController.swift; sourceTree = "<group>"; };
 		78F8ED4B1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOperationLeadFeedViewController.swift; sourceTree = "<group>"; };
 		78F8ED4F1ED0AE7200ABD3ED /* OperationFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFeedTableViewCell.swift; sourceTree = "<group>"; };
+		78F8ED521ED0DA7C00ABD3ED /* OperationFeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationFeedModel.swift; sourceTree = "<group>"; };
+		78F8ED561ED0DCA900ABD3ED /* RemoteAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAPI.swift; sourceTree = "<group>"; };
 		B6082A20CB3AC09E832F24DB /* Pods-hgss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.release.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.release.xcconfig"; sourceTree = "<group>"; };
 		FC8E336EE87FF6295EDA5603 /* Pods_hgss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hgss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,6 +177,8 @@
 		78F8ED491ED0AE0E00ABD3ED /* ChildViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				78F8ED541ED0DC8400ABD3ED /* Data */,
+				78F8ED511ED0DA4300ABD3ED /* Models */,
 				78F8ED4E1ED0AE5A00ABD3ED /* Views */,
 				78F8ED4A1ED0AE0E00ABD3ED /* ActiveOperationFeedTableViewController.swift */,
 				78F8ED4B1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift */,
@@ -186,6 +192,30 @@
 				78F8ED4F1ED0AE7200ABD3ED /* OperationFeedTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		78F8ED511ED0DA4300ABD3ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78F8ED521ED0DA7C00ABD3ED /* OperationFeedModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78F8ED541ED0DC8400ABD3ED /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				78F8ED551ED0DC9C00ABD3ED /* DataManager */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		78F8ED551ED0DC9C00ABD3ED /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				78F8ED561ED0DCA900ABD3ED /* RemoteAPI.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +350,9 @@
 				78F8ED401ED09DC500ABD3ED /* ActiveOperationFeedRootViewController.swift in Sources */,
 				78F8ED4D1ED0AE0E00ABD3ED /* ActiveOperationLeadFeedViewController.swift in Sources */,
 				789753CC1ED07AF100228A33 /* InviteFormViewController.swift in Sources */,
+				78F8ED571ED0DCA900ABD3ED /* RemoteAPI.swift in Sources */,
 				78F8ED441ED09DE700ABD3ED /* AcriveOperationMapRootViewController.swift in Sources */,
+				78F8ED531ED0DA7C00ABD3ED /* OperationFeedModel.swift in Sources */,
 				789753CE1ED07D6000228A33 /* LocationRow.swift in Sources */,
 				789753C71ED07A3E00228A33 /* ViewController.swift in Sources */,
 				78F8ED421ED09DD700ABD3ED /* ActiveOperationDetailsRootViewController.swift in Sources */,

@@ -15,9 +15,10 @@ class ActiveOperationFeedRootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let controller = storyboard!.instantiateViewController(withIdentifier: "activeOperationNormalFeed") as! ActiveOperationFeedTableViewController
+        let controller = storyboard!.instantiateViewController(withIdentifier: "ActiveOperationLeadFeedViewController") as! ActiveOperationLeadFeedViewController
+        
         addChildViewController(controller)
-        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        //controller.view.translatesAutoresizingMaskIntoConstraints = false
         feedChildViewController.addSubview(controller.view)
     }
 

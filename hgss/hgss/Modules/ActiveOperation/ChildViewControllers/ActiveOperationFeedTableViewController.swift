@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ActiveOperationFeedTableViewController: UITableViewController {
     
@@ -24,6 +25,8 @@ class ActiveOperationFeedTableViewController: UITableViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        print()
     }
 
     override func didReceiveMemoryWarning() {
