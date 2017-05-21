@@ -21,4 +21,11 @@ class RescueAction < ApplicationRecord
 	end
 
 	enum kind: [:search, :rescue]
+
+
+	def propagate_invites
+		invites.each do |invite|
+			invite.rescuer.propagate_message("Pokrenuta je akcija spašavanja, da li ste dostupni?")
+		end
+	end
 end

@@ -1,6 +1,7 @@
 def render_rescue_action(rescue_action)
   team_members = rescue_action.invites.map do |i|
     {
+      :id => i.id,
       :name => i.rescuer.name,
       :phone_number => i.rescuer.phone_number,
       :status => i.status
@@ -104,6 +105,7 @@ module Mobile
 
       sr = search.results.map do |r|
         {
+          :id => r.id,
           :name => r.name,
           :phone_number => r.phone_number,
           :distance => Geocoder::Calculations.distance_between([latitude,longitude], [r.home_latitude,r.home_longitude])
@@ -150,7 +152,7 @@ module Mobile
       requires :kind, type: Integer
       requires :start_position_latitude, type: Float
       requires :start_position_longitude, type: Float
-      requires :rescuer_ids, type: Array[Integer], coerce_with: ->(val) { val.split(/\s+/) }
+      requires :rescuer_ids, type: Array[Integer], coerce_with: ->(val) { val.split(",") }
     end
     post 'rescue_actions' do
       description = params[:description]
@@ -168,12 +170,14 @@ module Mobile
         :start_position_longitude => start_position_longitude
       })
 
-      rescue_action.save!
-
       rescuer_ids.each do |rescuer_id|
+        #require 'pry'; binding.pry
         invite = Invite.new({:rescuer_id => rescuer_id, :rescue_action_id => rescue_action.id, :status => 0})
-        invite.save!
+        rescue_action.invites << invite
       end
+
+      rescue_action.save!
+      rescue_action.propagate_invites
 
       render_rescue_action(rescue_action)
     end

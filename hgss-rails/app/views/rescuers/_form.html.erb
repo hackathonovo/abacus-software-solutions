@@ -15,6 +15,7 @@
       <%= f.input :availability %>
       <%= f.input :level, collection: Rescuer.levels.keys.to_a %>
       <%= f.association :specialties %>
+      <%= f.input :push_token %>
     </div>
     <div class="col-6">
       <%= f.input :home_latitude, :as => :hidden %>

@@ -78,6 +78,6 @@ class RescuersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rescuer_params
-      params.require(:rescuer).permit(:first_name, :last_name, :availability, :phone_number, :address_home, :home_latitude, :home_longitude, :address_work, :work_latitude, :work_longitude, :level, :specialty_ids => [])
+      params.require(:rescuer).permit(:first_name, :last_name, :availability, :phone_number, :address_home, :home_latitude, :home_longitude, :address_work, :work_latitude, :work_longitude, :level, :push_token, :specialty_ids => [])
     end
 end
