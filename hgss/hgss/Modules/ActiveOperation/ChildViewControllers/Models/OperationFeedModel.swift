@@ -11,7 +11,7 @@ import Unbox
 
 
 struct OperationUpdatesFeed {
-    let feedUpdates:Array<SingleFeedUpdate>
+    var feedUpdates:Array<SingleFeedUpdate>
 }
 
 extension OperationUpdatesFeed: Unboxable {
@@ -26,8 +26,8 @@ struct SingleFeedUpdate {
     let rescueId: Int
     let text:String
     let author:String
-    let createdAt:Int
-    let updatedAt:Int
+    let createdAt:Date
+    let updatedAt:Date
 }
 
 extension SingleFeedUpdate: Unboxable {
@@ -37,10 +37,10 @@ extension SingleFeedUpdate: Unboxable {
         self.text = try unboxer.unbox(key: "text")
         self.author = try unboxer.unbox(key: "author")
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         
-        self.createdAt = try unboxer.unbox(key: "created_at")
-        self.updatedAt = try unboxer.unbox(key: "updated_at")
+        let createdAtUnix: Double = try unboxer.unbox(key: "created_at")
+        let updatedAtUnix: Double = try unboxer.unbox(key: "updated_at")
+        self.createdAt =  try Date(timeIntervalSince1970:  createdAtUnix)
+        self.updatedAt = try Date(timeIntervalSince1970:  updatedAtUnix)
     }
 }
