@@ -74,7 +74,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Testest" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yZK-N5-h1U">
-                                            <rect key="frame" x="9.5" y="37" width="356.5" height="55.5"/>
+                                            <rect key="frame" x="9.5" y="37" width="356" height="55.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -135,6 +135,9 @@
                                             <constraint firstAttribute="width" secondItem="uRZ-qk-2mC" secondAttribute="height" multiplier="1:1" id="P6C-O6-LTj"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="btnPress:" destination="9Qv-xM-HxG" eventType="touchUpInside" id="4Ww-Sm-qop"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,7 +153,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3EK-ZC-d2M">
-                                <rect key="frame" x="-0.5" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OperationLeadFeedTableViewCell" rowHeight="80" id="oAS-Hc-KW9" customClass="OperationFeedTableViewCell" customModule="hgss" customModuleProvider="target">
@@ -212,6 +215,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="3EK-ZC-d2M" id="qFL-LG-X6R"/>
+                        <outlet property="textArea" destination="7pw-pP-Gty" id="yCo-iv-p9D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkC-qh-I48" userLabel="First Responder" sceneMemberID="firstResponder"/>
