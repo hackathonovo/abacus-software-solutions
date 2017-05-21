@@ -15,8 +15,8 @@ development:
   host: localhost
   database: hgss_rails
   pool: 5
-  username: darianjug
-  password: 
+  username: user1
+  password: password1
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
