@@ -11,27 +11,23 @@ import Alamofire
 import Unbox
 
 class ActiveOperationLeadFeedViewController: UIViewController {
+    var feedItem: [SingleFeedUpdate]?
     
-//    @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var feedTextView: UITextView!
     @IBOutlet weak var tableView: UITableView!
     
-    let feeedContent: [FeedItem] = [
+    
+    /*let feeedContent: [FeedItem] = [
         FeedItem(updateTime: "12:00 12.02.2017", updateAuthor: "Mirko Mirić", updateContent: "Osoba pronadena negdje"),
         FeedItem(updateTime: "12:00 12.02.2017", updateAuthor: "Mirko Mirić", updateContent: "Osoba pronadena negdje"),
         FeedItem(updateTime: "12:00 12.02.2017", updateAuthor: "Mirko Mirić", updateContent: "Osoba pronadena negdje"),
         FeedItem(updateTime: "12:00 12.02.2017", updateAuthor: "Mirko Mirić", updateContent: "Osoba pronadena negdje"),
         FeedItem(updateTime: "12:00 12.02.2017", updateAuthor: "Mirko Mirić", updateContent: "Osoba pronadena negdje"),
         FeedItem(updateTime: "12:00 12.02.2017", updateAuthor: "Mirko Mirić", updateContent: "Osoba pronadena negdje")
-    ]
+    ]*/
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.dataSource = self
-        tableView.delegate = self
         
         print("asdasda")
         
@@ -39,9 +35,16 @@ class ActiveOperationLeadFeedViewController: UIViewController {
             print(response)
             if let json = response.result.value as? [String: Any]
             {
-                let mlem: OperationUpdatesFeed = try! unbox(dictionary: json)
+                let feedasda:OperationUpdatesFeed = try! unbox(dictionary: json)
                 
-                print("\(mlem.feedUpdates.first?.author)")
+                self.feedItem = feedasda.feedUpdates
+                
+                print("\(self.feedItem?.first?.author)")
+                
+                self.tableView.dataSource = self
+                self.tableView.delegate = self
+                
+                self.tableView.reloadData()
             }
         }
     }
@@ -49,6 +52,10 @@ class ActiveOperationLeadFeedViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func btnPostFeed(_ sender: Any) {
+        
     }
 }
 
@@ -62,15 +69,17 @@ extension ActiveOperationLeadFeedViewController: UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OperationLeadFeedTableViewCell") as! OperationFeedTableViewCell
         
-        cell.feedOperatorName.text = feeedContent[indexPath.row].updateAuthor
-        cell.feedOperationUpdate.text = feeedContent[indexPath.row].updateTime
-        cell.feedOperationUpdateContent.text = feeedContent[indexPath.row].updateContent
+        let feed =  feedItem?[indexPath.row]
+        
+        cell.feedOperatorName.text = feed?.author
+        cell.feedOperationUpdate.text = "\((feed?.createdAt)!)" ?? ""
+        cell.feedOperationUpdateContent.text = feed?.text
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return feeedContent.count
+        return (feedItem?.count)!
     }
 }

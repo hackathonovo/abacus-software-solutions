@@ -14,11 +14,13 @@ class ActiveActionFormViewController : FormViewController {
     
     override func viewDidLoad() {
         
+        super.viewDidLoad()
+        
         self.tableView?.contentInset.top = -35
         
         self.loadForm()
         
-        super.viewDidLoad()
+        
     }
     
     
