@@ -24,7 +24,7 @@ class InviteFormViewController: FormViewController {
             {
                 let root: OperationModelRoot = try! unbox(dictionary: json)
                 
-                form +++ Section("Lokacija")
+                self.form +++ Section("Lokacija")
                     <<< LocationRow { row in
                         row.title = ""
                     }
@@ -35,7 +35,7 @@ class InviteFormViewController: FormViewController {
                     }
                     <<< TextRow() { row in
                         row.title = "Početak"
-                        row.value = "\(NSDate(timeIntervalSince1970: root.startTime))"
+                        row.value = "\(NSDate(timeIntervalSince1970: TimeInterval(root.startTime)))"
                     }
                     <<< TextRow() { row in
                         row.title = "Voditelj"
