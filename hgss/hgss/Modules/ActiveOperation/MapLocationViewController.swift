@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 import AudioToolbox
+import AVFoundation
 
 class MapLocationViewController : UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     
@@ -71,6 +72,7 @@ class MapLocationViewController : UIViewController, MKMapViewDelegate, CLLocatio
         flashScreen()
         vibrate()
         animateButton()
+        turnOnFlashLight()
         
     }
     
@@ -101,6 +103,23 @@ class MapLocationViewController : UIViewController, MKMapViewDelegate, CLLocatio
                 v.removeFromSuperview()
                 UIScreen.main.brightness = oldBrightness
             })
+        }
+    }
+    
+    func turnOnFlashLight(){
+        let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        if (device?.hasTorch)! {
+            do {
+                try device?.lockForConfiguration()
+                if (device?.torchMode == AVCaptureTorchMode.on) {
+                    device?.torchMode = AVCaptureTorchMode.off
+                } else {
+                    try device?.setTorchModeOnWithLevel(1.0)
+                }
+                device?.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
         }
     }
     
