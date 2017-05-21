@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import Alamofire
 
 class InviteViewController: UIViewController {
+    
+    var rescueId:Int?
+    var childVC:InviteFormViewController?
 
+    @IBOutlet weak var childVCContainer: UIView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "EmbeddedInviteVC") {
+            childVC = segue.destination as! InviteFormViewController
+            childVC?.operationId = rescueId
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         // Do any additional setup after loading the view.
     }
 

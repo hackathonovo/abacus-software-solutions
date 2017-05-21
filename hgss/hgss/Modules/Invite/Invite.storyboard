@@ -13,7 +13,7 @@
         <!--Invite View Controller-->
         <scene sceneID="eQp-wO-8BC">
             <objects>
-                <viewController id="nHh-6L-2Kb" customClass="InviteViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InviteViewController" id="nHh-6L-2Kb" customClass="InviteViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V0D-gL-glD"/>
                         <viewControllerLayoutGuide type="bottom" id="xuX-ho-VbV"/>
@@ -25,7 +25,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2q-fg-rha">
                                 <rect key="frame" x="0.0" y="64" width="375" height="539"/>
                                 <connections>
-                                    <segue destination="KvA-tS-Rpw" kind="embed" id="cOy-Ej-uAY"/>
+                                    <segue destination="KvA-tS-Rpw" kind="embed" identifier="EmbeddedInviteVC" id="cOy-Ej-uAY"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGK-4A-1bi">
@@ -66,6 +66,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6xL-3l-9DE"/>
+                    <connections>
+                        <outlet property="childVCContainer" destination="r2q-fg-rha" id="9Hd-2M-2Hr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fm0-r2-bra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,6 +96,10 @@
         <scene sceneID="SEb-cU-qSQ">
             <objects>
                 <viewController id="KvA-tS-Rpw" customClass="InviteFormViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gfY-ST-Hh6"/>
+                        <viewControllerLayoutGuide type="bottom" id="EZw-IT-kRH"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qRG-YI-XHh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bin-72-pLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="354"/>
+            <point key="canvasLocation" x="2018" y="176"/>
         </scene>
     </scenes>
 </document>

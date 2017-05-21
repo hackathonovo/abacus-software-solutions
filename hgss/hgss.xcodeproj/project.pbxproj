@@ -18,6 +18,7 @@
 		788177641ED109A400C26C57 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177631ED109A400C26C57 /* ParticipantTableViewCell.swift */; };
 		788177671ED109AD00C26C57 /* ActiveActionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177651ED109AD00C26C57 /* ActiveActionFormViewController.swift */; };
 		788177681ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177661ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift */; };
+		788177761ED1110900C26C57 /* CreateActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177751ED1110900C26C57 /* CreateActionViewController.swift */; };
 		789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753BF1ED0788D00228A33 /* AppDelegate.swift */; };
 		789753C41ED0792700228A33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 789753C31ED0792700228A33 /* Info.plist */; };
 		789753C71ED07A3E00228A33 /* MainActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789753C61ED07A3E00228A33 /* MainActionViewController.swift */; };
@@ -51,6 +52,7 @@
 		788177631ED109A400C26C57 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
 		788177651ED109AD00C26C57 /* ActiveActionFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveActionFormViewController.swift; path = ChildViewControllers/ActiveActionFormViewController.swift; sourceTree = "<group>"; };
 		788177661ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewtParticipantsTableViewController.swift; path = ChildViewControllers/PreviewtParticipantsTableViewController.swift; sourceTree = "<group>"; };
+		788177751ED1110900C26C57 /* CreateActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateActionViewController.swift; path = hgss/Modules/CreateAction/CreateActionViewController.swift; sourceTree = SOURCE_ROOT; };
 		789753BF1ED0788D00228A33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789753C31ED0792700228A33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		789753C61ED07A3E00228A33 /* MainActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActionViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +89,10 @@
 		2F09358A1ED07E9300468C55 /* CreateAction */ = {
 			isa = PBXGroup;
 			children = (
+				788177711ED10D4300C26C57 /* Data */,
 				2F9F6D481ED083E80000388A /* CreateActionFromViewController.swift */,
 				2F9F6D4A1ED084840000388A /* CreateAction.storyboard */,
+				788177751ED1110900C26C57 /* CreateActionViewController.swift */,
 			);
 			name = CreateAction;
 			sourceTree = "<group>";
@@ -166,6 +170,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7881776E1ED10C6C00C26C57 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		788177711ED10D4300C26C57 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			path = hgss/Modules/CreateAction/Data;
+			sourceTree = SOURCE_ROOT;
+		};
 		789753BD1ED077B400228A33 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +209,7 @@
 		789753C51ED07A2600228A33 /* MainAction */ = {
 			isa = PBXGroup;
 			children = (
+				7881776E1ED10C6C00C26C57 /* Data */,
 				2F9A80A91ED0745300E6A2FF /* MainAction.storyboard */,
 				789753C61ED07A3E00228A33 /* MainActionViewController.swift */,
 			);
@@ -413,6 +433,7 @@
 				2F9F6D521ED090130000388A /* LocationRow.swift in Sources */,
 				788177641ED109A400C26C57 /* ParticipantTableViewCell.swift in Sources */,
 				789753C11ED0788D00228A33 /* AppDelegate.swift in Sources */,
+				788177761ED1110900C26C57 /* CreateActionViewController.swift in Sources */,
 				2F9F6D491ED083E80000388A /* CreateActionFromViewController.swift in Sources */,
 				78E541941ED0FBB500E7D93D /* ActiveOperationDetailsRootViewController.swift in Sources */,
 				78E541971ED0FBB500E7D93D /* ActiveOperationTabBarViewController.swift in Sources */,
