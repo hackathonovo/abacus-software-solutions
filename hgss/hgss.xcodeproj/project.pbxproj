@@ -15,6 +15,7 @@
 		2F9F6D4D1ED0878A0000388A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9F6D4C1ED0878A0000388A /* MapKit.framework */; };
 		2F9F6D521ED090130000388A /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F6D511ED090130000388A /* LocationRow.swift */; };
 		2F9F6D561ED095500000388A /* LocationRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9F6D551ED095500000388A /* LocationRowCell.xib */; };
+		2FD1EA781ED16C940082E962 /* MapLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1EA771ED16C940082E962 /* MapLocationViewController.swift */; };
 		788177641ED109A400C26C57 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177631ED109A400C26C57 /* ParticipantTableViewCell.swift */; };
 		788177671ED109AD00C26C57 /* ActiveActionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177651ED109AD00C26C57 /* ActiveActionFormViewController.swift */; };
 		788177681ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788177661ED109AD00C26C57 /* PreviewtParticipantsTableViewController.swift */; };
@@ -48,6 +49,7 @@
 		2F9F6D4C1ED0878A0000388A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2F9F6D511ED090130000388A /* LocationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationRow.swift; path = Helpers/Eureka/LocationRow.swift; sourceTree = "<group>"; };
 		2F9F6D551ED095500000388A /* LocationRowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocationRowCell.xib; path = Helpers/Eureka/LocationRowCell.xib; sourceTree = "<group>"; };
+		2FD1EA771ED16C940082E962 /* MapLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapLocationViewController.swift; sourceTree = "<group>"; };
 		54DD42FE28EDBA0CFA578CBD /* Pods-hgss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hgss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hgss/Pods-hgss.debug.xcconfig"; sourceTree = "<group>"; };
 		788177631ED109A400C26C57 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
 		788177651ED109AD00C26C57 /* ActiveActionFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveActionFormViewController.swift; path = ChildViewControllers/ActiveActionFormViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				78E541831ED0FBB500E7D93D /* ActiveOperationStoryboard.storyboard */,
 				78E541841ED0FBB500E7D93D /* ActiveOperationTabBarViewController.swift */,
 				78E541851ED0FBB500E7D93D /* ChildViewControllers */,
+				2FD1EA771ED16C940082E962 /* MapLocationViewController.swift */,
 			);
 			name = ActiveOperation;
 			path = hgss/Modules/ActiveOperation;
@@ -378,7 +381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A62E1D96C0A9C16EE3DE07FE /* [CP] Copy Pods Resources */ = {
@@ -426,6 +429,7 @@
 				78E5419A1ED0FBB500E7D93D /* RemoteAPI.swift in Sources */,
 				78E5419E1ED0FBB500E7D93D /* InviteFormViewController.swift in Sources */,
 				788177671ED109AD00C26C57 /* ActiveActionFormViewController.swift in Sources */,
+				2FD1EA781ED16C940082E962 /* MapLocationViewController.swift in Sources */,
 				78E5419B1ED0FBB500E7D93D /* OperationFeedModel.swift in Sources */,
 				78E5419C1ED0FBB500E7D93D /* OperationFeedTableViewCell.swift in Sources */,
 				78E541991ED0FBB500E7D93D /* ActiveOperationLeadFeedViewController.swift in Sources */,

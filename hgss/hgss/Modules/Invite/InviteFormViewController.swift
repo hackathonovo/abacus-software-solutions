@@ -29,14 +29,12 @@ class InviteFormViewController: FormViewController {
             if let json = response.result.value as? [String: Any]
             {
                 let root: OperationModelRoot = try! unbox(dictionary: json)
-                
                 let sect = Section("Tim")
                 for m in root.data.teamMembers {
                     sect <<< TextRow() { row in
                         row.title = "\(m.name)"
                     }
                 }
-                
                 self.form +++ Section("Lokacija")
                     <<< LocationRow { row in
                         row.title = ""
