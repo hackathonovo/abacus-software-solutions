@@ -1,5 +1,5 @@
 <div class="hgss-data-header">
-  <h1 class="hgss-data-title flx-left"><%= local_assigns[:title] %></h1>
+  <h3 class="hgss-data-title flx-left"><%= local_assigns[:title] %></h3>
   <%= link_to polymorphic_path([:new, local_assigns[:singular_model_name]]), class: "btn btn-lg btn-primary hgss-data-new-record flx-right" do %>
     <%= fa_icon "plus-circle" %> New
   <% end %>

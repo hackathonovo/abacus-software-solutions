@@ -1,0 +1,11 @@
+<%= simple_form_for(:rescue_action_area_rescuer, :url => rescue_action_area_rescuers_url(@rescue_action, @rescue_action_area)) do |f| %>
+  <div class="field">
+  	<%= simple_fields_for :other do |o| %>
+    	<%= f.input :rescuer, :as => :select, :input_html => {:class => "rescue_select"} %>
+  	<% end %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit, :class => "btn btn-primary" %>
+  </div>
+
+<% end %>

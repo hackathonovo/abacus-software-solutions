@@ -60,7 +60,7 @@ $(function() {
     });
     $('select:not(.rescue_select)').select2({
         theme: "bootstrap",
-        tags: true
+        tags: false
     });
     $('.rescue_select').select2({
         theme: "bootstrap",

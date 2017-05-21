@@ -1,0 +1,23 @@
+<h3>Rescue Action Area Rescuers</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rescue_action_area_rescuers.each do |rescue_action_area_rescuer| %>
+      <tr>
+        <td><%= rescue_action_area_rescuer.name %></td>
+        <td><%= link_to 'Destroy', rescue_action_area_rescuer_path(@rescue_action, @rescue_action_area, rescue_action_area_rescuer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rescue Action Area Rescuer', new_rescue_action_area_rescuer_path(@rescue_action, @rescue_action_area) %>

@@ -16,7 +16,7 @@ class RescueActionAreasController < ApplicationController
 
   # GET /rescue_action_areas/new
   def new
-    @rescue_action_area = RescueActionArea.new(rescue_action_id: params[:rescue_action_id])
+    @rescue_action_area = RescueActionArea.new(rescue_action_id: params[:rescue_action_id], latitude: @rescue_action.start_position_latitude, longitude: @rescue_action.start_position_longitude)
   end
 
   # GET /rescue_action_areas/1/edit

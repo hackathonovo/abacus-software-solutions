@@ -114,6 +114,37 @@ module Mobile
     end
 
     params do
+      requires :rescuer_id, type: Integer
+    end
+    get 'invites/for/:rescuer_id' do
+      invites = Invite.where({:rescuer_id => params[:rescuer_id]})
+      invites_mapped = invites.map do |i|
+        {
+          :id => i.id,
+          :rescue_action_id => i.rescue_action_id,
+          :status => i.status
+        }
+      end
+      {:data => invites_mapped}
+    end
+
+    params do
+      requires :rescuer_id, type: Integer
+      requires :status, type: Integer
+    end
+    post 'invites/:rescuer_id' do
+      invite = Invite.find(params[:rescuer_id])
+      invite.status = params[:status]
+      invite.save!
+
+      {:data => {
+          :id => invite.id,
+          :rescue_action_id => invite.rescue_action_id,
+          :status => invite.status
+        }}
+    end
+
+    params do
       requires :description, type: String
       requires :lead_id, type: Integer
       requires :kind, type: Integer

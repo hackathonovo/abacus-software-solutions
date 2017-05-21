@@ -1,5 +1,5 @@
 <div class="hgss-data-header">
-  <h1 class="hgss-data-title flx-left">Rescue action areas</h1>
+  <h3 class="hgss-data-title flx-left">Rescue action areas</h3>
   <a class="btn btn-lg btn-primary hgss-data-new-record flx-right" href="/rescue_actions/<%= params[:rescue_action_id] %>/areas/new">
     <i class="fa fa-plus-circle"></i> New
   </a>
@@ -9,6 +9,7 @@
     <tr>
       <th width="250px">Map</th>
       <th>Name</th>
+      <th width="160px"></th>
       <th></th>
     </tr>
   </thead>
@@ -20,6 +21,14 @@
       </td>
       <td>
         <%= area.name %>
+      </td>
+      <td width="207px">
+        <a class="btn btn-block btn-outline-success" href="/rescue_actions/<%= params[:rescue_action_id] %>/areas/<%= area.id %>/rescuers">
+          <i class="fa fa-user"></i> Rescuers
+          <% if area.rescuers.count != 0 %>
+            <span class="badge badge-pill badge-success"><%= area.rescuers.count %></span>
+          <% end %>
+        </a>
       </td>
       <td width="207px">
         <div class="d-flex justify-content-end row-actions">

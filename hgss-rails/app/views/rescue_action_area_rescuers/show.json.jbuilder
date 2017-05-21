@@ -1,0 +1,1 @@
+json.partial! "rescue_action_area_rescuers/rescue_action_area_rescuer", rescue_action_area_rescuer: @rescue_action_area_rescuer
