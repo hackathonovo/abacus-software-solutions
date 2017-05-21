@@ -46,7 +46,12 @@ class ActiveActionFormViewController : FormViewController {
                 row.title = "Voditelj"
                 row.value = "Ivan Ivić"
                 row.tag = "voditeljTextRow"
-                row.disabled = true
+                row.onCellSelection({(cell, row) in
+                    if let url = NSURL(string: "tel://800800") {
+                        UIApplication.shared.openURL(url as URL)
+                    }
+                })
+                
             }
             <<< ActionSheetRow<String>() {
                 $0.title = "Akcija"
