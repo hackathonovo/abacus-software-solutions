@@ -12,7 +12,7 @@
     <% @rescue_action_area_rescuers.each do |rescue_action_area_rescuer| %>
       <tr>
         <td><%= rescue_action_area_rescuer.name %></td>
-        <td><%= link_to 'Destroy', rescue_action_area_rescuer_path(@rescue_action, @rescue_action_area, rescue_action_area_rescuer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Izbriši', rescue_action_area_rescuer_path(@rescue_action, @rescue_action_area, rescue_action_area_rescuer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

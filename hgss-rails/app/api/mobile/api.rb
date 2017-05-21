@@ -45,11 +45,15 @@ end
 module Mobile
   class API < Grape::API
     format :json
+
  
     params do
       requires :rescue_action_id, type: Integer
     end
     get 'feed/:rescue_action_id' do
+      header 'Cache-Control', 'no-cache, no-store, must-revalidate'
+      header 'Pragma', 'no-cache'
+      header 'Expires', '0'
       rescue_action_id = params[:rescue_action_id]
       rescue_action = RescueAction.find(rescue_action_id)
       {:data => render_feed_items(rescue_action.feed_items) }
@@ -61,6 +65,9 @@ module Mobile
       requires :rescue_action_id, type: Integer
     end
     get 'detail/:rescue_action_id' do
+      header 'Cache-Control', 'no-cache, no-store, must-revalidate'
+      header 'Pragma', 'no-cache'
+      header 'Expires', '0'
       rescue_action_id = params[:rescue_action_id]
       rescue_action = RescueAction.find(rescue_action_id)
       render_rescue_action(rescue_action)
@@ -70,6 +77,9 @@ module Mobile
       requires :rescuer_id, type: Integer
     end
     get 'map/:rescuer_id' do
+      header 'Cache-Control', 'no-cache, no-store, must-revalidate'
+      header 'Pragma', 'no-cache'
+      header 'Expires', '0'
       rescuer_id = params[:rescuer_id]
       rescuer = Rescuer.find(rescuer_id)
       rescue_invite = rescuer.invites.first
@@ -96,6 +106,9 @@ module Mobile
       requires :longitude, type: Float
     end
     get 'rescuers/:query' do
+      header 'Cache-Control', 'no-cache, no-store, must-revalidate'
+      header 'Pragma', 'no-cache'
+      header 'Expires', '0'
       query = params[:query]
       latitude = params[:latitude]
       longitude = params[:longitude]
@@ -119,6 +132,9 @@ module Mobile
       requires :rescuer_id, type: Integer
     end
     get 'invites/for/:rescuer_id' do
+      header 'Cache-Control', 'no-cache, no-store, must-revalidate'
+      header 'Pragma', 'no-cache'
+      header 'Expires', '0'
       invites = Invite.where({:rescuer_id => params[:rescuer_id]})
       invites_mapped = invites.map do |i|
         {
@@ -135,6 +151,9 @@ module Mobile
       requires :status, type: Integer
     end
     post 'invites/:rescuer_id' do
+      header 'Cache-Control', 'no-cache, no-store, must-revalidate'
+      header 'Pragma', 'no-cache'
+      header 'Expires', '0'
       invite = Invite.find(params[:rescuer_id])
       invite.status = params[:status]
       invite.save!
@@ -155,6 +174,9 @@ module Mobile
       requires :rescuer_ids, type: Array[Integer], coerce_with: ->(val) { val.split(",") }
     end
     post 'rescue_actions' do
+      header 'Cache-Control', 'no-cache, no-store, must-revalidate'
+      header 'Pragma', 'no-cache'
+      header 'Expires', '0'
       description = params[:description]
       lead_id = params[:lead_id]
       kind = params[:kind]
@@ -188,6 +210,9 @@ module Mobile
       requires :author, type: String
     end
     post 'rescue_action/:id' do
+      header 'Cache-Control', 'no-cache, no-store, must-revalidate'
+      header 'Pragma', 'no-cache'
+      header 'Expires', '0'
       rescue_action_id = params[:id]
       text = params[:text]
       author = params[:author]

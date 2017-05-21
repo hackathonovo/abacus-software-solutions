@@ -21,3 +21,36 @@
 
 en:
   hello: "Hello world"
+  Rescue actions: "Akcije"
+  New Rescue Action: "Nova akcija"
+  Map: "Karta"
+  Lead: "Voditelj"
+  Kind: "Tip"
+  Description: "Opis"
+  New: " Novo"
+  Edit: "Uredi"
+  Name: "Ime"
+  Level: "Razina"
+  Availability: "Dostupnost"
+  Phone number: "Telefonski broj"
+  Address home: "Kućna adresa"
+  Address work: "Adresa posla"
+  Rescuer: "Spašavatelj"
+  Specialty: "Vještine"
+  simple_form:
+    labels:
+      defaults:
+        first_name: 'Ime'
+        last_name: 'Prezime'
+        phone_number: 'Telefonski broj'
+        availability: 'Dostupnost'
+        level: 'Razina'
+        specialties: 'Vještine'
+        lead: "Voditelj"
+        kind: "Vrsta"
+        start_position_latitude: "Latituda početne lokacije"
+        start_position_longitude: "Longituda početne lokacije"
+        description: "Opis"
+        password: 'Lozinka'
+        address_home: 'Kućna adresa'
+        address_work: 'Adresa posla'

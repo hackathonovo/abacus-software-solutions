@@ -1,9 +1,9 @@
-<h3>Listing invites</h3>
+<h3>Spašavatelji u akciji</h3>
 
 <table>
   <tr>
-    <th>Rescuer</th>
-    <th>Status</th>
+    <th>Spašavatelj</th>
+    <th>Odgovor</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,11 @@
   <tr>
     <td><%= invite.rescuer.name %></td>
     <td><%= invite.status %></td>
-    <td><%= link_to 'Show', [invite.rescue_action, invite] %></td>
-    <td><%= link_to 'Edit', edit_rescue_action_invite_path(invite.rescue_action, invite) %></td>
-    <td><%= link_to 'Destroy', [invite.rescue_action, invite], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Obriši', [invite.rescue_action, invite], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Invite', new_rescue_action_invite_path(params[:rescue_action_id]) %>
+<%= link_to 'Nova pozivnica', new_rescue_action_invite_path(params[:rescue_action_id]) %>

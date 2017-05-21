@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <%= render_navigation :expand_all => true %>
     <% if user_signed_in? %>
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit" data-href="<%= new_rescue_action_path %>"><%= fa_icon "plus-circle" %> New rescue action</button>
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit" data-href="<%= new_rescue_action_path %>"><%= fa_icon "plus-circle" %> <%=t :"New Rescue Action" %></button>
     <% end %>
   </div>
 </nav>

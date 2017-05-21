@@ -3,7 +3,7 @@
     <%= fa_icon "eye" %>
   <% end %>
   <%= link_to polymorphic_path([:edit, local_assigns[:record]]), class: "btn btn-outline-primary" do %>
-    <%= fa_icon "pencil" %> Edit
+    <%= fa_icon "pencil" %> <%=t :Edit %>
   <% end %>
   <%= link_to polymorphic_path(local_assigns[:record]), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" do %>
     <%= fa_icon "trash" %>

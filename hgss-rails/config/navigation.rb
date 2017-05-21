@@ -57,9 +57,9 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
     if user_signed_in?
-      primary.item :actions, 'Actions', rescue_actions_path, {}
-      primary.item :rescuers, 'Rescuers', rescuers_path, {}
-      primary.item :specialties, 'Specialty', specialties_path, {}
+      primary.item :actions, 'Akcije', rescue_actions_path, {}
+      primary.item :rescuers, 'Spašavatelji', rescuers_path, {}
+      primary.item :specialties, 'Vještine', specialties_path, {}
     end
 
     # you can also specify html attributes to attach to this particular level

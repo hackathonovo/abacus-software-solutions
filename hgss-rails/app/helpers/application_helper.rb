@@ -14,7 +14,12 @@ module ApplicationHelper
 	def hgss_data_table(columns, rows, &block)
 		thead = content_tag :thead do
 			content_tag :tr do
-				(columns + [:""]).collect {|column|  concat content_tag(:th, column.to_s.humanize)}.join().html_safe
+
+				(columns + [:""]).collect do |column|  
+					column_name = column.to_s.humanize
+					column_name = I18n.t(column_name) if not column_name.blank?
+					concat content_tag(:th, column_name)
+				end.join().html_safe
 			end
  		end
 
