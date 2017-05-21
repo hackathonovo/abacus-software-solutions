@@ -17,6 +17,7 @@ class MapLocationViewController : UIViewController, MKMapViewDelegate, CLLocatio
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var emergencyView: UIView!
     
+    let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
     var timer : Timer!
     var startedEmergency : Bool!
     
@@ -60,6 +61,18 @@ class MapLocationViewController : UIViewController, MKMapViewDelegate, CLLocatio
             timer.invalidate()
             print("stopped")
             startedEmergency = false
+            //Turn off torch after emergency is stopped
+            if (device?.hasTorch)! {
+                do {
+                    try device?.lockForConfiguration()
+                    
+                    device?.torchMode = AVCaptureTorchMode.off
+
+                    device?.unlockForConfiguration()
+                } catch {
+                    print(error)
+                }
+            }
             
         } else {
             timer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(emergency), userInfo: nil, repeats: true)
@@ -107,7 +120,6 @@ class MapLocationViewController : UIViewController, MKMapViewDelegate, CLLocatio
     }
     
     func turnOnFlashLight(){
-        let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         if (device?.hasTorch)! {
             do {
                 try device?.lockForConfiguration()

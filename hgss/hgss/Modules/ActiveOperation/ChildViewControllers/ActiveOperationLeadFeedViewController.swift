@@ -14,6 +14,9 @@ class ActiveOperationLeadFeedViewController: UIViewController {
     
 //    @IBOutlet weak var tableView: UITableView!
     
+    
+    @IBOutlet weak var textArea: UITextView!
+    
     @IBOutlet weak var tableView: UITableView!
     
     let feeedContent: [FeedItem] = [
@@ -25,6 +28,9 @@ class ActiveOperationLeadFeedViewController: UIViewController {
         FeedItem(updateTime: "12:00 12.02.2017", updateAuthor: "Mirko Mirić", updateContent: "Osoba pronadena negdje")
     ]
     
+    @IBAction func btnPress(_ sender: Any) {
+        
+    }
     
 
     override func viewDidLoad() {
