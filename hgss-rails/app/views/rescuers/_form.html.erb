@@ -1,0 +1,75 @@
+<%= simple_form_for(@rescuer) do |f| %>
+<%= f.error_notification %>
+<div class="form-inputs">
+  <div class="row">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-6">
+          <%= f.input :first_name %>
+        </div>
+        <div class="col-6">
+          <%= f.input :last_name %>
+        </div>
+      </div>
+      <%= f.input :phone_number %>
+      <%= f.input :availability %>
+      <%= f.input :level, collection: Rescuer.levels.keys.to_a %>
+      <%= f.association :specialties %>
+      <%= f.input :push_token %>
+    </div>
+    <div class="col-6">
+      <%= f.input :home_latitude, :as => :hidden %>
+      <%= f.input :home_longitude, :as => :hidden %>
+      <%= f.input :work_latitude, :as => :hidden %>
+      <%= f.input :work_longitude, :as => :hidden %>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home" role="tab">Kućna adresa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#work" role="tab">Adresa posla</a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="home" role="tabpanel">
+          <div class="location-selector-component">
+            <div class="location-selector-component-form">
+              <%= simple_fields_for :map do |nf| %>
+              <%= nf.input :home_search, :required => false, :label => false %>
+              <% end %>
+            </div>
+            <div class="map-component"
+              style="width: 100%; height: 300px;"
+              data-latitude-input="#rescuer_home_latitude"
+              data-longitude-input="#rescuer_home_longitude"
+            data-location-name-input="#map_home_search"></div>
+          </div>
+          <br>
+          <%= f.input :address_home, as: :text, input_html: {rows: 4} %>
+        </div>
+        <div class="tab-pane" id="work" role="tabpanel">
+          <div class="location-selector-component">
+            <div class="location-selector-component-form">
+              <%= simple_fields_for :map do |nf| %>
+              <%= nf.input :work_search, :required => false, :label => false %>
+              <% end %>
+            </div>
+            <div class="map-component"
+              style="width: 100%; height: 300px;"
+              data-latitude-input="#rescuer_work_latitude"
+              data-longitude-input="#rescuer_work_longitude"
+            data-location-name-input="#map_work_search"></div>
+          </div>
+          <br>
+          <%= f.input :address_work, as: :text, input_html: {rows: 4} %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>

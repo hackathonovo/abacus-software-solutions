@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rescue_member: one
+  location_on: 2017-05-20 13:23:21
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  rescue_member: two
+  location_on: 2017-05-20 13:23:21
+  latitude: 1.5
+  longitude: 1.5

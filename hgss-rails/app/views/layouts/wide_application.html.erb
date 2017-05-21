@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      HgssRails
+    </title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag '//maps.google.com/maps/api/js?key=AIzaSyBiW2d-FSKStrfYWSzxC2SAw_HUFssLWE4&libraries=places,drawing', 'data-turbolinks-eval': 'false' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body 
+  class="wide-layout"
+  data-controller="<%= params[:controller] %>" 
+  data-action="<%= params[:action] %>">  
+  
+    <%= render 'navbar' %>
+    <div class="container-fluid h-100 pl-0">
+      <%= yield %>
+    </div>
+
+    <script type="text/javascript">
+      <% flash.each do |name, msg| %>
+        new Noty({
+            type: 'info',
+            layout: 'topCenter',
+            theme: 'bootstrap-v4',
+            text: "<%= msg %>",
+        }).show();
+      <% end %>
+    </script>
+  </body>
+</html>

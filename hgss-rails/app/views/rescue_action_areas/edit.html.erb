@@ -1,0 +1,26 @@
+<%= simple_form_for(@rescue_action_area, :url => rescue_action_area_path(@rescue_action_area.rescue_action.id, @rescue_action_area.id), html: { class: "h-100"}) do |f| %>
+<div class="row h-100">
+  <div class="col-8 h-100">
+    <div class="point-form-map-overlay">
+      <%= simple_fields_for :map do |nf| %>
+        <%= nf.input :search, :required => false, :label => false %>
+      <% end %>
+    </div>
+    <div id="poly-map-component"
+    style="width: 100%; height: 100%;"></div>
+  </div>
+  <div class="col-4 h-100 of-scroll">
+    <%= f.error_notification %>
+    <div class="form-inputs point-form-inputs-panel">
+      <%= f.input :name %>
+      <%= f.input :points, :wrapper_html => {:style => "display: none;"} %>
+      <%= f.input :latitude, :wrapper_html => {:style => "display: none;"} %>
+      <%= f.input :longitude, :wrapper_html => {:style => "display: none;"} %>
+      <%= f.input :zoom_level, :wrapper_html => {:style => "display: none;"} %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, :class => "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+<% end %>

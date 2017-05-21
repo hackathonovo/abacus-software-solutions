@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rescue_action_area: one
+  latitude: 1.5
+  longitude: 1.5
+  index: 
+
+two:
+  rescue_action_area: two
+  latitude: 1.5
+  longitude: 1.5
+  index: 

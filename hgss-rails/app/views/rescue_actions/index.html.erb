@@ -1,0 +1,26 @@
+<%= hgss_data_header :rescue_actions %>
+<%= hgss_data_table [:map, :lead, :kind, :description, :"" ], @rescue_actions do |column, point| %>
+<% case column %>
+<% when :lead %>
+<%= point.lead.name %>
+<% when :"" %>
+<% if RescueAction.kinds[point.kind] == 0 %>
+  <%= link_to rescue_action_areas_url(point), {:class => "btn btn-block btn-outline-warning"} do %>
+    <%= fa_icon "circle" %> Područja potrage <% if point.rescue_action_areas.count != 0 %><span class="badge badge-pill badge-warning"><%= point.rescue_action_areas.count %></span><% end %>
+  <% end %>
+<% end %>
+<%= link_to rescue_action_invites_url(point), {:class => "btn btn-block btn-outline-success"} do %>
+  <%= fa_icon "user" %> Spašavatelji <% if point.invites.count != 0 %><span class="badge badge-pill badge-success"><%= point.invites.count %></span><% end %>
+<% end %>
+
+<%= link_to rescue_action_feed_items_url(point), {:class => "btn btn-block btn-outline-info"} do %>
+  <%= fa_icon "envelope" %> Obavijesti <% if point.feed_items.count != 0 %><span class="badge badge-pill badge-info"><%= point.feed_items.count %></span><% end %>
+<% end %>
+<% when :map %>
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= point.start_position_latitude %>,<%= point.start_position_longitude %>&zoom=13&size=250x200&maptype=roadmap
+&markers=color:red%7Clabel:*%7C<%= point.start_position_latitude %>,<%= point.start_position_longitude %>
+&key=AIzaSyBiW2d-FSKStrfYWSzxC2SAw_HUFssLWE4">
+<% else %>
+<% point[column] %>
+<% end %>
+<% end %>

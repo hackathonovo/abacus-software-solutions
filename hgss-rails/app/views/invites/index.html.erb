@@ -1,0 +1,23 @@
+<h3>Spašavatelji u akciji</h3>
+
+<table>
+  <tr>
+    <th>Spašavatelj</th>
+    <th>Odgovor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @invites.each do |invite| %>
+  <tr>
+    <td><%= invite.rescuer.name %></td>
+    <td><%= invite.status %></td>
+    <td><%= link_to 'Obriši', [invite.rescue_action, invite], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nova pozivnica', new_rescue_action_invite_path(params[:rescue_action_id]) %>

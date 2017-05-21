@@ -1,0 +1,2 @@
+module RescueActionsHelper
+end

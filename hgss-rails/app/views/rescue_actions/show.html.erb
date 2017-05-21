@@ -1,0 +1,27 @@
+<p>
+  <strong>Lead:</strong>
+  <%= @rescue_action.lead_id %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @rescue_action.kind %>
+</p>
+
+<p>
+  <strong>Start position latitude:</strong>
+  <%= @rescue_action.start_position_latitude %>
+</p>
+
+<p>
+  <strong>Start position longitude:</strong>
+  <%= @rescue_action.start_position_longitude %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @rescue_action.description %>
+</p>
+
+<%= link_to 'Uredi', edit_rescue_action_path(@rescue_action) %> |
+<%= link_to 'Back', rescue_actions_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lead_id: 1
+  kind: 
+  start_position_latitude: 1.5
+  start_position_longitude: 1.5
+  description: MyText
+
+two:
+  lead_id: 1
+  kind: 
+  start_position_latitude: 1.5
+  start_position_longitude: 1.5
+  description: MyText

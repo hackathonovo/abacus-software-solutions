@@ -1,0 +1,8 @@
+<%= simple_form_for([@invite.rescue_action, @invite]) do |f| %>
+  <div class="field">
+    <%= f.association :rescuer, :input_html => {:class => "rescue_select"} %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit, :class => "btn btn-primary" %>
+  </div>
+<% end %>
