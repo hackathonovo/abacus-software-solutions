@@ -31,8 +31,8 @@ class MainActionViewController: UIViewController {
                 
                 var inviteId = -1
                 for inv in inviteResponse.invites {
-                    if (inv.id > inviteId && inv.status == "unanswered") {
-                        inviteId = inv.id
+                    if (inv.rescueId > inviteId && inv.status == "unanswered") {
+                        inviteId = inv.rescueId
                     }
                 }
                 

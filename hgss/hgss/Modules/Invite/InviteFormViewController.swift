@@ -10,6 +10,7 @@ import UIKit
 import Eureka
 import Alamofire
 import Unbox
+import Foundation
 
 class InviteFormViewController: FormViewController {
     
@@ -18,28 +19,40 @@ class InviteFormViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request("http://192.168.201.145:3000/api/mobile/feed/\(operationId)").validate().responseJSON { response in
+        let url = URL(string: "http://192.168.201.145:3000/api/mobile/detail/\(operationId!)")
+        let urlRequest = NSMutableURLRequest(url: url!)
+        urlRequest.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        
+        
+        Alamofire.request(urlRequest as URLRequest).validate().responseJSON { response in
             print(response)
             if let json = response.result.value as? [String: Any]
             {
                 let root: OperationModelRoot = try! unbox(dictionary: json)
                 
-                form +++ Section("Lokacija")
+                let sect = Section("Tim")
+                for m in root.data.teamMembers {
+                    sect <<< TextRow() { row in
+                        row.title = "\(m.name)"
+                    }
+                }
+                
+                self.form +++ Section("Lokacija")
                     <<< LocationRow { row in
                         row.title = ""
                     }
                     +++ Section("Detalji")
                     <<< TextRow() { row in
                         row.title = "Početna Lokacija"
-                        row.value = "\(root.location.latitude),\(root.location.longitude)"
+                        row.value = "\(root.data.location.latitude),\(root.data.location.longitude)"
                     }
                     <<< TextRow() { row in
                         row.title = "Početak"
-                        row.value = "\(NSDate(timeIntervalSince1970: root.startTime))"
+                        row.value = "\(NSDate(timeIntervalSince1970: TimeInterval(root.data.startTime)))"
                     }
                     <<< TextRow() { row in
                         row.title = "Voditelj"
-                        row.value = "Ivo Ivica"
+                        row.value = "\(root.data.leader.name)"
                     }
                     <<< TextRow() { row in
                         row.title = "Tip"
@@ -48,18 +61,11 @@ class InviteFormViewController: FormViewController {
                     +++ Section("Opis")
                     <<< TextAreaRow() { row in
                         row.title = "Opis"
-                        row.value = "Netko se je izgubio i treba biti spašen"
+                        row.value = "\(root.data.description)"
                     }
-                    +++ Section("Tim")
-                    <<< TextRow() { row in
-                        row.title = "Neko Nekić"
-                    }
-                    <<< TextRow() { row in
-                        row.title = "Neko Nekić"
-                    }
-                    <<< TextRow() { row in
-                        row.title = "Neko Nekić"
-                }
+                    +++ sect
+                
+            
 
             }
         }
@@ -130,19 +136,9 @@ struct OperationModel:Unboxable {
 }
 
 struct OperationModelRoot:Unboxable {
-    let id:Int
-    let location:OperationLocationModel
-    let leader:OperationLeaderModel
-    let teamMembers:[OperationTeamMemberModel]
-    let startTime:Int
-    let description:String
+    let data:OperationModel
     
     init(unboxer: Unboxer) throws {
-        self.id = try unboxer.unbox(key: "id")
-        self.location = try unboxer.unbox(key: "location")
-        self.leader = try unboxer.unbox(key: "leader")
-        self.teamMembers = try unboxer.unbox(key: "team_members")
-        self.startTime = try unboxer.unbox(key: "start_time")
-        self.description = try unboxer.unbox(key: "description")
+        self.data = try unboxer.unbox(key: "data")
     }
 }
