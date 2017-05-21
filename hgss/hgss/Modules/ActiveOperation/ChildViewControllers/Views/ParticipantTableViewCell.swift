@@ -16,7 +16,7 @@ class ParticipantTableViewCell : UITableViewCell {
     var mobileNum : String!
     
     @IBAction func callParticipant(_ sender: Any) {
-        if let callURL = URL(string: "tel://\(mobileNum)"), UIApplication.shared.canOpenURL(callURL) {
+        if let callURL = URL(string: "tel://\(mobileNum)") {
             UIApplication.shared.openURL(callURL)
         }
     }
