@@ -11,6 +11,8 @@ import UIKit
 import MapKit
 import AudioToolbox
 import AVFoundation
+import Alamofire
+import Unbox
 
 class MapLocationViewController : UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     
@@ -29,19 +31,45 @@ class MapLocationViewController : UIViewController, MKMapViewDelegate, CLLocatio
         self.startedEmergency = false
         self.emergencyView.layer.cornerRadius = self.emergencyView.frame.width / 2
         
-        if(CLLocationManager.locationServicesEnabled()){
-            locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestAlwaysAuthorization()
-            locationManager.startUpdatingLocation()
+//        if(CLLocationManager.locationServicesEnabled()){
+//            locationManager = CLLocationManager()
+//            locationManager.delegate = self
+//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//            locationManager.requestAlwaysAuthorization()
+//            locationManager.startUpdatingLocation()
+//        }
+        
+//        mapView.delegate = self
+//        mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
+//        mapView.showsUserLocation = true
+//        mapView.setCenter(mapView.userLocation.coordinate, animated: true)
+        
+        
+        let tabbarRoot = self.tabBarController as! ActiveOperationTabBarViewController
+        
+        let url = URL(string: "http://192.168.201.41:8000/api/mobile/detail/\(tabbarRoot.operationId!)")
+        let urlRequest = NSMutableURLRequest(url: url!)
+        urlRequest.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        Alamofire.request(urlRequest as URLRequest).validate().responseJSON { response in
+            print(response)
+            if let json = response.result.value as? [String: Any]
+            {
+                let root: OperationModelRoot = try! unbox(dictionary: json)
+                
+                let annotation = MKPointAnnotation()
+                annotation.coordinate.latitude = CLLocationDegrees(root.data.location.latitude)
+                annotation.coordinate.longitude = CLLocationDegrees(root.data.location.longitude)
+                
+                self.mapView.addAnnotation(annotation)
+                
+                var centerCoord = CLLocationCoordinate2D()
+                centerCoord.latitude = CLLocationDegrees(root.data.location.latitude)
+                centerCoord.longitude = CLLocationDegrees(root.data.location.longitude)
+                self.mapView.setCenter(centerCoord, animated: true)
+                
+            }
         }
-        
-        mapView.delegate = self
-        mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
-        mapView.showsUserLocation = true
-        mapView.setCenter(mapView.userLocation.coordinate, animated: true)
-        
+   
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

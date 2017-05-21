@@ -40,7 +40,7 @@ class CreateActionFormViewController : FormViewController, MKMapViewDelegate {
             "rescuer_ids":"\(idNumsStr)",
         ]
         
-        Alamofire.request("http://192.168.201.145:3000/api/mobile/rescue_actions", method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON {
+        Alamofire.request("http://192.168.201.41:8000/api/mobile/rescue_actions", method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON {
             response in
             debugPrint(response)
         }

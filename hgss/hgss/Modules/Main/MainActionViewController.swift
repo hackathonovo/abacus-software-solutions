@@ -19,9 +19,9 @@ class MainActionViewController: UIViewController {
         
         btnCreateAction.layer.cornerRadius = btnCreateAction.frame.width / 2
         
-        var userId = 3
+        var userId = 1
         
-        Alamofire.request("http://192.168.201.145:3000/api/mobile/invites/for/\(userId)").responseJSON {
+        Alamofire.request("http://192.168.201.41:8000/api/mobile/invites/for/\(userId)").responseJSON {
             response in
             if let json = response.result.value as? [String: Any]
             {
@@ -29,24 +29,30 @@ class MainActionViewController: UIViewController {
                 
                 
                 
-                var inviteId = -1
+                var rescueId = -1
+                var invId = -1
                 for inv in inviteResponse.invites {
-                    if (inv.rescueId > inviteId && inv.status == "unanswered") {
-                        inviteId = inv.rescueId
+                    if (inv.rescueId > rescueId && inv.status == "unanswered") {
+                        rescueId = inv.rescueId
+                        invId = inv.id
                     }
                 }
                 
-                if (inviteId > -1) {
-                    self.showInvite(invId: inviteId)
+                if (rescueId > -1) {
+                    self.showInvite(invId: rescueId, ii: invId)
                 }
             }
         }
     }
     
-    func showInvite(invId: Int) {
+    func showInvite(invId: Int, ii: Int) {
         let sb = UIStoryboard(name: "Invite", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "InviteViewController") as! InviteViewController
-        vc.rescueId = invId
+        let vc = sb.instantiateViewController(withIdentifier: "InviteViewController") as! UINavigationController
+        
+        let thevc = vc.childViewControllers.first as! InviteViewController
+        
+        thevc.rescueId = invId
+        thevc.inviteId = ii
         
         self.present(vc, animated: false, completion: nil)
     }

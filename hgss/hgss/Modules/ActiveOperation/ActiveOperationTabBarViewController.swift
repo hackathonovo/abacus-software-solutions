@@ -9,9 +9,13 @@
 import UIKit
 
 class ActiveOperationTabBarViewController: UITabBarController {
+    
+    var operationId: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }

@@ -11,6 +11,7 @@ import Eureka
 import Alamofire
 import Unbox
 import Foundation
+import CoreLocation
 
 class InviteFormViewController: FormViewController {
     
@@ -19,7 +20,7 @@ class InviteFormViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "http://192.168.201.145:3000/api/mobile/detail/\(operationId!)")
+        let url = URL(string: "http://192.168.201.41:8000/api/mobile/detail/\(operationId!)")
         let urlRequest = NSMutableURLRequest(url: url!)
         urlRequest.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
         
@@ -31,39 +32,49 @@ class InviteFormViewController: FormViewController {
                 let root: OperationModelRoot = try! unbox(dictionary: json)
                 let sect = Section("Tim")
                 for m in root.data.teamMembers {
-                    sect <<< TextRow() { row in
+                    sect <<< LabelRow() { row in
                         row.title = "\(m.name)"
+                        row.onCellSelection({(cell, row) in
+                            row.onCellSelection({(cell, row) in
+                                if let url = NSURL(string: "tel://\(m.phoneNumber)") {
+                                    UIApplication.shared.openURL(url as URL)
+                                }
+                            })
+                        })
                     }
                 }
                 self.form +++ Section("Lokacija")
                     <<< LocationRow { row in
                         row.title = ""
+                        row.cell.isUserInteractionEnabled = false
+                        row.value = CLLocation(latitude: Double(root.data.location.latitude), longitude: Double(root.data.location.longitude))
                     }
                     +++ Section("Detalji")
-                    <<< TextRow() { row in
+                    <<< LabelRow() { row in
                         row.title = "Početna Lokacija"
                         row.value = "\(root.data.location.latitude),\(root.data.location.longitude)"
                     }
-                    <<< TextRow() { row in
+                    <<< LabelRow() { row in
                         row.title = "Početak"
                         row.value = "\(NSDate(timeIntervalSince1970: TimeInterval(root.data.startTime)))"
                     }
-                    <<< TextRow() { row in
+                    <<< LabelRow() { row in
                         row.title = "Voditelj"
                         row.value = "\(root.data.leader.name)"
+                        row.onCellSelection({(cell, row) in
+                            print("\(root.data.leader.phoneNumber)")
+                        })
                     }
-                    <<< TextRow() { row in
+                    <<< LabelRow() { row in
                         row.title = "Tip"
                         row.value = "Potraga"
                     }
                     +++ Section("Opis")
-                    <<< TextAreaRow() { row in
+                    <<< LabelRow() { row in
                         row.title = "Opis"
                         row.value = "\(root.data.description)"
                     }
                     +++ sect
-                
-            
 
             }
         }

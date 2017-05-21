@@ -13,7 +13,7 @@
         <!--Invite View Controller-->
         <scene sceneID="eQp-wO-8BC">
             <objects>
-                <viewController storyboardIdentifier="InviteViewController" id="nHh-6L-2Kb" customClass="InviteViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nHh-6L-2Kb" customClass="InviteViewController" customModule="hgss" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V0D-gL-glD"/>
                         <viewControllerLayoutGuide type="bottom" id="xuX-ho-VbV"/>
@@ -34,10 +34,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7j-9h-2sr">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="64"/>
                                         <state key="normal" title="Odbaci"/>
+                                        <connections>
+                                            <action selector="odbaci:" destination="nHh-6L-2Kb" eventType="touchUpInside" id="HmT-8R-8lV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me9-vf-9J7">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="64"/>
                                         <state key="normal" title="Prihvati"/>
+                                        <connections>
+                                            <action selector="prihvati:" destination="nHh-6L-2Kb" eventType="touchUpInside" id="szx-Dt-4qL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,7 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6xL-3l-9DE"/>
                     <connections>
-                        <outlet property="childVCContainer" destination="r2q-fg-rha" id="9Hd-2M-2Hr"/>
+                        <segue destination="zXk-Du-Ofj" kind="show" identifier="ActiveOperationStoryboardSegue" id="iRQ-kK-QZu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fm0-r2-bra" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -77,7 +83,7 @@
         <!--Navigation Controller-->
         <scene sceneID="1Yb-CL-MEk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uWD-50-MmM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="InviteViewController" automaticallyAdjustsScrollViewInsets="NO" id="uWD-50-MmM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dui-OS-iOp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -109,6 +115,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bin-72-pLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2018" y="176"/>
+        </scene>
+        <!--ActiveOperationStoryboard-->
+        <scene sceneID="sWQ-uV-TMt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ActiveOperationStoryboard" id="zXk-Du-Ofj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ad5-u8-0Ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528" y="636"/>
         </scene>
     </scenes>
 </document>

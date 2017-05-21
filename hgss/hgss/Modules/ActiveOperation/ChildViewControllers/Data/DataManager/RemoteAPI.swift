@@ -14,7 +14,7 @@ enum Router: URLRequestConvertible {
     case map(id: Int)
     case details(id: Int)
     
-    static let baseURLString = "http://192.168.201.145:3000"
+    static let baseURLString = "http://192.168.201.41:8000"
     
     var method: HTTPMethod {
         switch self {

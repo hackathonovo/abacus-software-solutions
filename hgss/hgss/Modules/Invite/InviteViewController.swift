@@ -12,14 +12,32 @@ import Alamofire
 class InviteViewController: UIViewController {
     
     var rescueId:Int?
+    var inviteId:Int?
+    
     var childVC:InviteFormViewController?
-
-    @IBOutlet weak var childVCContainer: UIView!
+    
+    @IBAction func odbaci(_ sender: Any) {
+        let parameters: Parameters = ["status":"\(2)"]
+        Alamofire.request("http://192.168.201.41:8000/api/mobile/invites/\(inviteId!)", method: .post, parameters: parameters, encoding: URLEncoding.default)
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func prihvati(_ sender: Any) {
+        let parameters: Parameters = ["status":"\(1)"]
+        Alamofire.request("http://192.168.201.41:8000/api/mobile/invites/\(inviteId!)", method: .post, parameters: parameters, encoding: URLEncoding.default)
+        
+        performSegue(withIdentifier: "ActiveOperationStoryboardSegue", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "EmbeddedInviteVC") {
             childVC = segue.destination as! InviteFormViewController
             childVC?.operationId = rescueId
+        }
+        
+        if (segue.identifier == "ActiveOperationStoryboardSegue") {
+            let opDetVC = segue.destination as! ActiveOperationTabBarViewController
+            opDetVC.operationId = rescueId
         }
     }
     
